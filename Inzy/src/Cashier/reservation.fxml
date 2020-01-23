@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Reservation">
+               <font>
+                  <Font name="Alef Bold" size="44.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Form" textFill="#ffe300">
+               <font>
+                  <Font name="Alef Bold" size="44.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="170.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity">
+         <children>
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="98.0" text="Personal " textFill="#ffe300">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="142.0" text="Information ">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets bottom="30.0" left="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <HBox prefHeight="150.0" prefWidth="370.0">
+               <children>
+                  <VBox prefHeight="150.0" prefWidth="357.0">
+                     <children>
+                        <JFXTextField focusColor="#b1b29e" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="266.0" promptText="Last name " unFocusColor="#ffe300">
+                           <VBox.margin>
+                              <Insets bottom="25.0" left="60.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Alef Regular" size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#b1b29e" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="266.0" promptText="First name" unFocusColor="#ffe300">
+                           <font>
+                              <Font name="Alef Regular" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="25.0" left="60.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <HBox prefHeight="29.0" prefWidth="274.0">
+                           <VBox.margin>
+                              <Insets bottom="25.0" left="60.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="33.0" prefWidth="65.0" text="Sexe">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox opacity="0.5" prefHeight="26.0" prefWidth="207.0" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="-20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="150.0" prefWidth="357.0">
+               <children>
+                  <JFXTextField editable="false" focusColor="#b1b29e" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="266.0" promptText="Address " text="CIN/N°passport " unFocusColor="#ffe300">
+                     <font>
+                        <Font name="Alef Regular" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="25.0" left="60.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField focusColor="#b1b29e" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="266.0" promptText="Email" unFocusColor="#ffe300">
+                     <font>
+                        <Font name="Alef Regular" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="25.0" left="60.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField focusColor="#b1b29e" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="266.0" promptText="Phone number" unFocusColor="#ffe300">
+                     <font>
+                        <Font name="Alef Regular" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="60.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="-20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="-20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity">
+         <children>
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="80.0" text="Room" textFill="#ffe300">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="142.0" text="Information ">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets bottom="30.0" left="20.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <VBox>
+         <children>
+            <JFXComboBox focusColor="#a8a340" prefHeight="26.0" prefWidth="544.0" promptText="Room">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <HBox>
+               <children>
+                  <Label fx:id="RFrom_D" text="From">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXDatePicker fx:id="Rro" defaultColor="#676664" opacity="0.58">
+                     <HBox.margin>
+                        <Insets left="10.0" right="80.0" />
+                     </HBox.margin>
+                  </JFXDatePicker>
+                  <Label text="To">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXDatePicker defaultColor="#666767" opacity="0.58">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXDatePicker>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" top="15.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets left="40.0" />
+         </VBox.margin>
+      </VBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="66.0" prefWidth="260.0">
+         <VBox.margin>
+            <Insets left="400.0" top="40.0" />
+         </VBox.margin>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton onMouseClicked="#add_service" prefHeight="55.0" prefWidth="119.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="Add services">
+                     <font>
+                        <Font name="Alef Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" stylesheets="@../css/stylesheet.css">
+               <children>
+                  <JFXButton prefHeight="55.0" prefWidth="120.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="validate">
+                     <font>
+                        <Font name="Alef Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
