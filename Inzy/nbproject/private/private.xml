@@ -5,12 +5,14 @@
         <group>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Administrator/admin_panel.fxml</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/about_us.fxml</file>
+            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/client_info.fxml</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Administrator/admin.java</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/home.fxml</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Administrator/homeController.java</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/login/Launch.java</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DAO/DaoBD.java</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/cashier_panel.fxml</file>
+            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Model/Auth.java</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/css/stylesheet.css</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/cashier.java</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/rooms.fxml</file>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="724.0" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Clients">
+               <font>
+                  <Font name="Alef Bold" size="44.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="270.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="547.0" prefWidth="727.0">
+         <children>
+            <VBox prefHeight="538.0" prefWidth="379.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="120.0" text="Search BY:">
+                     <font>
+                        <Font name="Alef Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="40.0" left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="36.0" prefWidth="361.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="120.0" text="First Name">
+                           <font>
+                              <Font name="Alef Regular" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField prefHeight="26.0" prefWidth="186.0">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="361.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="120.0" text="Last Name">
+                           <font>
+                              <Font name="Alef Regular" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField prefHeight="26.0" prefWidth="186.0">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="144.0" prefHeight="36.0" prefWidth="361.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="138.0" text="CIN/N°passport">
+                           <font>
+                              <Font name="Alef Regular" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField prefHeight="26.0" prefWidth="168.0">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="200.0" prefHeight="38.0" prefWidth="361.0">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <children>
+                        <JFXButton prefHeight="24.0" prefWidth="290.0" styleClass="yellow-btn" text="Search">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox prefHeight="94.0" prefWidth="228.0">
+                     <children>
+                        <ImageView fitHeight="198.0" fitWidth="258.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@../images/images/pinzy-03.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="110.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="538.0" prefWidth="381.0">
+               <children>
+                  <TableView prefHeight="542.0" prefWidth="364.0">
+                     <columns>
+                        <TableColumn prefWidth="54.400054931640625" text="CIN/Npp" />
+                        <TableColumn prefWidth="64.80004578828812" text="First name" />
+                        <TableColumn prefWidth="64.00003051757812" text="Last name" />
+                        <TableColumn minWidth="1.5999755859375" prefWidth="45.5999755859375" text="status" />
+                        <TableColumn minWidth="0.0" prefWidth="35.99995422363281" text="sexe" />
+                        <TableColumn prefWidth="108.0001220703125" text="phone Nbr" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
