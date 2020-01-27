@@ -13,7 +13,7 @@
 
 <!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>-->
 
-<VBox id="VBox" alignment="CENTER_LEFT" prefHeight="480.0" prefWidth="480.0" styleClass="white-pane" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox id="VBox" alignment="CENTER_LEFT" prefHeight="480.0" prefWidth="480.0" styleClass="white-pane" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.AdministratorController">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -48,7 +48,7 @@
             <Insets left="20.0" right="15.0" top="20.0" />
          </VBox.margin>
          <children>
-            <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="416.0" promptText="Username" styleClass="tf" HBox.hgrow="ALWAYS">
+            <TextField fx:id="admsername" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="416.0" promptText="Username" styleClass="tf" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="15.0" />
                </font>
@@ -63,7 +63,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="200.0" styleClass="tf_box">
          <children>
-            <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="456.0" promptText="Serial N°" styleClass="tf" HBox.hgrow="ALWAYS">
+            <TextField fx:id="aserial" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="416.0" promptText=" Serial N" styleClass="tf">
                <font>
                   <Font size="15.0" />
                </font>
@@ -80,7 +80,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="263.0" prefHeight="45.0" prefWidth="200.0" styleClass="tf_box">
          <children>
-            <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Password" styleClass="tf" HBox.hgrow="ALWAYS">
+            <TextField fx:id="apassword" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="416.0" promptText="Password" styleClass="tf">
                <font>
                   <Font size="15.0" />
                </font>
@@ -101,7 +101,7 @@
             <Insets left="15.0" right="15.0" top="20.0" />
          </VBox.margin>
          <children>
-            <JFXButton prefHeight="39.0" prefWidth="151.0" ripplerFill="WHITE" text="Login">
+            <JFXButton onAction="#AdminLogin" prefHeight="39.0" prefWidth="151.0" ripplerFill="WHITE" text="Login">
                <font>
                   <Font size="15.0" />
                </font>

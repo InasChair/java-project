@@ -17,9 +17,14 @@ public class DaoBD {
     private String Password;
     private Connection Connexion;
     
+    public DaoBD()
+    {
+         Connexion = null;
+    }
+    
     public void Connect(){
         try{
-            Class.forName(Pilote);
+           Class.forName(Pilote);
             Connexion=DriverManager.getConnection(Url,Login, Password);
         }catch(ClassNotFoundException ex){
             System.err.println("Problem de pilote...");

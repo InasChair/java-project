@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cashier.ServiceController">
    <children>
       <HBox maxHeight="-Infinity" maxWidth="-Infinity">
          <children>
@@ -49,7 +49,7 @@
             <Insets />
          </opaqueInsets>
          <VBox.margin>
-            <Insets left="30.0" />
+            <Insets left="50.0" />
          </VBox.margin>
       </HBox>
       <HBox maxHeight="-Infinity" maxWidth="-Infinity">
@@ -57,12 +57,12 @@
             <Insets />
          </opaqueInsets>
          <VBox.margin>
-            <Insets bottom="30.0" left="20.0" />
+            <Insets bottom="30.0" left="20.0" top="50.0" />
          </VBox.margin>
       </HBox>
       <HBox layoutX="60.0" layoutY="162.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="28.0" prefWidth="724.0">
          <children>
-            <JFXCheckBox checkedColor="#ffe300" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="0.0" prefWidth="95.0" text="SPA">
+            <JFXCheckBox fx:id="ch1" checkedColor="#ffe300" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="0.0" prefWidth="95.0" text="SPA">
                <HBox.margin>
                   <Insets left="20.0" top="25.0" />
                </HBox.margin>
@@ -79,10 +79,10 @@
                               <Font name="Arial Bold" size="15.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="2.0" top="15.0" />
+                              <Insets left="12.0" top="15.0" />
                            </HBox.margin>
                         </Label>
-                        <JFXDatePicker fx:id="Rro1" defaultColor="#676664" opacity="0.58" prefHeight="28.0" prefWidth="190.0">
+                        <JFXDatePicker fx:id="datedeb1" defaultColor="#676664" opacity="0.58" prefHeight="28.0" prefWidth="190.0">
                            <HBox.margin>
                               <Insets left="10.0" top="7.0" />
                            </HBox.margin>
@@ -95,7 +95,7 @@
                               <Insets left="10.0" top="15.0" />
                            </HBox.margin>
                         </Label>
-                        <JFXTimePicker defaultColor="#676664" prefHeight="128.0" prefWidth="177.0">
+                        <JFXTimePicker fx:id="T1" defaultColor="#676664" prefHeight="128.0" prefWidth="177.0">
                            <HBox.margin>
                               <Insets left="10.0" top="5.0" />
                            </HBox.margin>
@@ -117,7 +117,7 @@
       </HBox>
       <HBox layoutX="60.0" layoutY="225.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="28.0" prefWidth="724.0">
          <children>
-            <JFXCheckBox checkedColor="#ffe300" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="32.0" prefWidth="186.0" text="Sport Club">
+            <JFXCheckBox fx:id="ch2" checkedColor="#ffe300" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="32.0" prefWidth="186.0" text="Sport Club">
                <HBox.margin>
                   <Insets left="20.0" top="25.0" />
                </HBox.margin>
@@ -142,7 +142,7 @@
                               <Insets left="2.0" top="15.0" />
                            </HBox.margin>
                         </Label>
-                        <JFXDatePicker fx:id="Rro11" defaultColor="#676664" opacity="0.58" prefHeight="28.0" prefWidth="190.0">
+                        <JFXDatePicker fx:id="datedeb2" defaultColor="#676664" opacity="0.58" prefHeight="28.0" prefWidth="190.0">
                            <HBox.margin>
                               <Insets left="10.0" top="7.0" />
                            </HBox.margin>
@@ -155,7 +155,7 @@
                               <Insets left="10.0" top="15.0" />
                            </HBox.margin>
                         </Label>
-                        <JFXTimePicker defaultColor="#676664" prefHeight="28.0" prefWidth="177.0">
+                        <JFXTimePicker fx:id="T2" defaultColor="#676664" prefHeight="28.0" prefWidth="177.0">
                            <HBox.margin>
                               <Insets left="10.0" top="5.0" />
                            </HBox.margin>
@@ -174,7 +174,7 @@
       </HBox>
       <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="28.0" prefWidth="724.0">
          <children>
-            <JFXCheckBox checkedColor="#ffe300" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="32.0" prefWidth="178.0" text="Festival hall">
+            <JFXCheckBox fx:id="ch3" checkedColor="#ffe300" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="32.0" prefWidth="178.0" text="Festival hall">
                <HBox.margin>
                   <Insets left="20.0" top="25.0" />
                </HBox.margin>
@@ -199,7 +199,7 @@
                               <Insets left="2.0" top="15.0" />
                            </HBox.margin>
                         </Label>
-                        <JFXDatePicker fx:id="Rro12" defaultColor="#676664" opacity="0.58" prefHeight="28.0" prefWidth="190.0">
+                        <JFXDatePicker fx:id="datedeb3" defaultColor="#676664" opacity="0.58" prefHeight="28.0" prefWidth="190.0">
                            <HBox.margin>
                               <Insets left="10.0" top="7.0" />
                            </HBox.margin>
@@ -212,7 +212,7 @@
                               <Insets left="10.0" top="15.0" />
                            </HBox.margin>
                         </Label>
-                        <JFXTimePicker defaultColor="#676664" prefHeight="128.0" prefWidth="177.0">
+                        <JFXTimePicker fx:id="T3" defaultColor="#676664" prefHeight="128.0" prefWidth="177.0">
                            <HBox.margin>
                               <Insets left="10.0" top="5.0" />
                            </HBox.margin>
@@ -231,7 +231,7 @@
       </HBox>
       <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="28.0" prefWidth="724.0">
          <children>
-            <JFXCheckBox checkedColor="#ffe300" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="32.0" prefWidth="215.0" text="Conference hall">
+            <JFXCheckBox fx:id="ch4" checkedColor="#ffe300" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="32.0" prefWidth="215.0" text="Conference hall">
                <HBox.margin>
                   <Insets left="20.0" top="25.0" />
                </HBox.margin>
@@ -253,10 +253,10 @@
                               <Font name="Arial Bold" size="15.0" />
                            </font>
                            <HBox.margin>
-                              <Insets top="15.0" />
+                              <Insets left="12.0" top="15.0" />
                            </HBox.margin>
                         </Label>
-                        <JFXDatePicker fx:id="Rro13" defaultColor="#676664" opacity="0.58" prefHeight="28.0" prefWidth="190.0">
+                        <JFXDatePicker fx:id="datedeb4" defaultColor="#676664" opacity="0.58" prefHeight="28.0" prefWidth="190.0">
                            <HBox.margin>
                               <Insets left="10.0" top="7.0" />
                            </HBox.margin>
@@ -269,7 +269,7 @@
                               <Insets left="10.0" top="15.0" />
                            </HBox.margin>
                         </Label>
-                        <JFXTimePicker defaultColor="#676664" prefHeight="128.0" prefWidth="177.0">
+                        <JFXTimePicker fx:id="T4" defaultColor="#676664" prefHeight="128.0" prefWidth="177.0">
                            <HBox.margin>
                               <Insets left="10.0" top="5.0" />
                            </HBox.margin>
@@ -291,12 +291,12 @@
       </HBox>
       <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="66.0" prefWidth="260.0">
          <VBox.margin>
-            <Insets left="400.0" top="100.0" />
+            <Insets left="500.0" top="130.0" />
          </VBox.margin>
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <JFXButton onMouseClicked="#add_service" prefHeight="55.0" prefWidth="119.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="Return">
+                  <JFXButton onAction="#back" onMouseClicked="#add_service" prefHeight="55.0" prefWidth="119.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="Return">
                      <font>
                         <Font name="Alef Bold" size="15.0" />
                      </font>
@@ -305,7 +305,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" stylesheets="@../css/stylesheet.css">
                <children>
-                  <JFXButton prefHeight="55.0" prefWidth="120.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="validate">
+                  <JFXButton onAction="#clck3" prefHeight="55.0" prefWidth="120.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="validate">
                      <font>
                         <Font name="Alef Bold" size="15.0" />
                      </font>

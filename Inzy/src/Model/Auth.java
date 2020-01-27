@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package Model;
-
-import DAO.DaoBD;
+import DAO.*;
+import DB_objects.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,7 +23,7 @@ public class Auth {
     public Auth() {
         dao = new DaoBD();
         dao.setPilote("com.mysql.jdbc.Driver");
-        dao.setUrl("jdbc:mysql://localhost:3306/java_inzy");
+        dao.setUrl("jdbc:mysql://localhost:3306/hotel");
         dao.setLogin("root");
         dao.setPassword("");
         dao.Connect();
@@ -33,7 +33,7 @@ public class Auth {
           ResultSet Res = null;
           try {
             St = Con.createStatement();
-            Res = St.executeQuery("SELECT * FROM `auths` WHERE username = "+user +"and password = "+pass);
+            Res = St.executeQuery("SELECT * FROM `auths` WHERE username ='"+user +"' and password = '"+pass+"'");
         } catch (SQLException ex) {
              System.out.println("Erreur dans la requete select ou ST , " + ex.getMessage());
         }
@@ -44,7 +44,7 @@ public class Auth {
        ResultSet Res = null;
           try {
             St = Con.createStatement();
-            Res = St.executeQuery("SELECT * FROM `auths` WHERE username = "+user +"and password = "+pass +"and serial_num = "+ser);
+            Res = St.executeQuery("SELECT * FROM `auths` WHERE username = '"+user +"'and password = '"+pass +"'and serial_num = '"+ser+"'");
         } catch (SQLException ex) {
              System.out.println("Erreur dans la requete select ou ST , " + ex.getMessage());
         }

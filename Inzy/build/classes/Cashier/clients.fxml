@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -12,8 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="724.0" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cashier.customerController">
    <children>
       <HBox maxHeight="-Infinity" maxWidth="-Infinity">
          <children>
@@ -26,10 +26,13 @@
                </HBox.margin>
             </Label>
          </children>
+         <VBox.margin>
+            <Insets left="25.0" />
+         </VBox.margin>
       </HBox>
       <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="547.0" prefWidth="727.0">
          <children>
-            <VBox prefHeight="538.0" prefWidth="379.0">
+            <VBox prefHeight="556.0" prefWidth="366.0">
                <children>
                   <Label prefHeight="28.0" prefWidth="120.0" text="Search BY:">
                      <font>
@@ -41,27 +44,16 @@
                   </Label>
                   <HBox prefHeight="36.0" prefWidth="361.0">
                      <children>
-                        <Label prefHeight="28.0" prefWidth="120.0" text="First Name">
+                        <JFXCheckBox fx:id="ck1" checkedColor="#ffe300" text="Last Name">
                            <font>
-                              <Font name="Alef Regular" size="18.0" />
+                              <Font size="20.0" />
                            </font>
+                        </JFXCheckBox>
+                        <TextField fx:id="cekx" prefHeight="26.0" prefWidth="153.0">
                            <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </Label>
-                        <TextField>
-                           <HBox.margin>
-                              <Insets left="15.0" />
+                              <Insets left="38.0" />
                            </HBox.margin>
                         </TextField>
-                        <JFXButton prefHeight="24.0" prefWidth="51.0" styleClass="yellow-btn" text="search">
-                           <font>
-                              <Font size="11.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="10.0" right="5.0" />
-                           </HBox.margin>
-                        </JFXButton>
                      </children>
                      <VBox.margin>
                         <Insets bottom="20.0" />
@@ -72,27 +64,16 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="361.0">
                      <children>
-                        <Label prefHeight="28.0" prefWidth="120.0" text="Last Name">
+                        <JFXCheckBox fx:id="ck2" checkedColor="#ffe300" text="First Name">
                            <font>
-                              <Font name="Alef Regular" size="18.0" />
+                              <Font size="20.0" />
                            </font>
+                        </JFXCheckBox>
+                        <TextField fx:id="cek2" prefHeight="26.0" prefWidth="153.0">
                            <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </Label>
-                        <TextField>
-                           <HBox.margin>
-                              <Insets left="15.0" />
+                              <Insets left="35.0" />
                            </HBox.margin>
                         </TextField>
-                        <JFXButton prefHeight="24.0" prefWidth="50.0" styleClass="yellow-btn" text="search">
-                           <font>
-                              <Font size="11.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="10.0" right="5.0" />
-                           </HBox.margin>
-                        </JFXButton>
                      </children>
                      <padding>
                         <Insets left="10.0" />
@@ -103,67 +84,94 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="144.0" prefHeight="36.0" prefWidth="361.0">
                      <children>
-                        <Label prefHeight="28.0" prefWidth="138.0" text="CIN/N°passport">
+                        <JFXCheckBox fx:id="ck3" checkedColor="#ffe300" text="CIN/Passeport">
                            <font>
-                              <Font name="Alef Regular" size="18.0" />
+                              <Font size="18.0" />
                            </font>
+                        </JFXCheckBox>
+                        <TextField fx:id="cek3" prefHeight="26.0" prefWidth="153.0">
                            <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </Label>
-                        <TextField prefHeight="26.0" prefWidth="127.0">
-                           <HBox.margin>
-                              <Insets left="15.0" />
+                              <Insets left="20.0" />
                            </HBox.margin>
                         </TextField>
-                        <JFXButton prefHeight="24.0" prefWidth="50.0" styleClass="yellow-btn" text="search">
-                           <font>
-                              <Font size="11.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="10.0" right="5.0" />
-                           </HBox.margin>
-                        </JFXButton>
                      </children>
                      <padding>
                         <Insets left="10.0" />
                      </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
                   </HBox>
-                  <VBox prefHeight="94.0" prefWidth="228.0">
+                  <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <ImageView fitHeight="198.0" fitWidth="258.0" pickOnBounds="true" preserveRatio="true">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <image>
-                              <Image url="@../images/images/pinzy-03.png" />
-                           </image>
-                        </ImageView>
+                        <JFXCheckBox fx:id="ck4" checkedColor="#ffe300" prefHeight="30.0" prefWidth="108.0" text="Room">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXCheckBox>
+                        <TextField fx:id="cek4" prefHeight="26.0" prefWidth="153.0">
+                           <HBox.margin>
+                              <Insets left="55.0" top="12.0" />
+                           </HBox.margin>
+                        </TextField>
                      </children>
                      <VBox.margin>
-                        <Insets top="200.0" />
+                        <Insets top="5.0" />
                      </VBox.margin>
-                  </VBox>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="btt" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="150.0" styleClass="yellow-btn" text="Search">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btt1" onAction="#handleClearAction" prefHeight="25.0" prefWidth="150.0" styleClass="yellow-btn" text="Clear Filter">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets right="20.0" top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <ImageView fitHeight="78.0" fitWidth="257.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images/pinzy-03.png" />
+                     </image>
+                  </ImageView>
                </children>
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </VBox>
-            <VBox prefHeight="538.0" prefWidth="381.0">
+            <VBox prefHeight="547.0" prefWidth="374.0">
                <children>
-                  <TableView prefHeight="542.0" prefWidth="364.0">
+                  <TableView fx:id="liste" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handlemouseevent" prefHeight="600.0" prefWidth="376.0">
                      <columns>
-                        <TableColumn prefWidth="54.400054931640625" text="CIN/Npp" />
-                        <TableColumn prefWidth="64.80004578828812" text="First name" />
-                        <TableColumn prefWidth="64.00003051757812" text="Last name" />
-                        <TableColumn minWidth="1.5999755859375" prefWidth="45.5999755859375" text="status" />
-                        <TableColumn minWidth="0.0" prefWidth="35.99995422363281" text="sexe" />
-                        <TableColumn prefWidth="108.0001220703125" text="phone Nbr" />
+                        <TableColumn fx:id="iddoc" prefWidth="96.0" text="CIN/Passeport" />
+                        <TableColumn fx:id="lname" prefWidth="92.0" text="First name" />
+                        <TableColumn fx:id="fname" prefWidth="84.00006103515625" text="Last name" />
+                        <TableColumn fx:id="nroom" minWidth="1.5999755859375" prefWidth="102.4000244140625" text="Room" />
                      </columns>
                   </TableView>
                </children>
             </VBox>
          </children>
+         <VBox.margin>
+            <Insets left="40.0" />
+         </VBox.margin>
       </HBox>
    </children>
 </VBox>

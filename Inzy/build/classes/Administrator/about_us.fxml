@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="724.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inzyshotel.About_usController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="724.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
    <children>
       <Label layoutX="-1.0" layoutY="140.0" prefHeight="70.0" prefWidth="318.0" text="Projet Java:" AnchorPane.leftAnchor="-1.0">
          <font>

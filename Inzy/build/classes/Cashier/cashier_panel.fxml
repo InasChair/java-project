@@ -15,7 +15,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="bp" maxHeight="-Infinity" prefHeight="600.0" prefWidth="1024.0" styleClass="parent" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inzyshotel.homeController">
    <children>
-      <VBox prefHeight="610.0" prefWidth="300.0" styleClass="sidebar">
+      <VBox prefHeight="700.0" prefWidth="300.0" styleClass="sidebar">
          <children>
             <HBox>
                <VBox.margin>
@@ -58,7 +58,7 @@
                   <Insets left="10.0" />
                </padding>
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets bottom="20.0" top="10.0" />
                </VBox.margin>
             </HBox>
             <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="96.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
@@ -81,7 +81,7 @@
                   <Insets left="10.0" />
                </padding>
                <VBox.margin>
-                  <Insets bottom="10.0" top="10.0" />
+                  <Insets bottom="20.0" top="10.0" />
                </VBox.margin>
             </HBox>
             <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
@@ -104,7 +104,7 @@
                   <Insets left="10.0" />
                </padding>
                <VBox.margin>
-                  <Insets bottom="10.0" />
+                  <Insets bottom="20.0" top="10.0" />
                </VBox.margin>
             </HBox>
             <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="214.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
@@ -127,7 +127,7 @@
                   <Insets left="10.0" />
                </padding>
                <VBox.margin>
-                  <Insets bottom="10.0" />
+                  <Insets bottom="20.0" top="10.0" />
                </VBox.margin>
             </HBox>
             <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="347.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
@@ -150,7 +150,7 @@
                   <Insets left="10.0" />
                </padding>
                <VBox.margin>
-                  <Insets bottom="10.0" />
+                  <Insets bottom="20.0" top="10.0" />
                </VBox.margin>
             </HBox>
             <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="408.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
@@ -178,6 +178,6 @@
             </HBox>
          </children>
       </VBox>
-      <AnchorPane layoutX="299.0" prefHeight="610.0" prefWidth="725.0" />
+      <AnchorPane layoutX="299.0" prefHeight="700.0" prefWidth="800.0" />
    </children>
 </AnchorPane>

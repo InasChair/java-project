@@ -296,7 +296,7 @@
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <JFXButton onMouseClicked="#add_service" prefHeight="55.0" prefWidth="119.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="Return">
+                  <JFXButton prefHeight="55.0" prefWidth="119.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="Return">
                      <font>
                         <Font name="Alef Bold" size="15.0" />
                      </font>
