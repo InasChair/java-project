@@ -41,7 +41,7 @@ public class CashierController   implements Initializable {
       
         
         if (auth.User(user,pass).first()==true) {
-            System.out.println("yassine");
+            
     Stage s=new Stage();
   FXMLLoader Loader  = new FXMLLoader();
                    Loader.setLocation(getClass().getResource("/Cashier/reservation.fxml"));

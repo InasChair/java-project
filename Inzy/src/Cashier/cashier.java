@@ -20,7 +20,7 @@ public class cashier extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root;        
-        root = FXMLLoader.load(getClass().getResource("clients.fxml"));
+        root = FXMLLoader.load(getClass().getResource("cashier_panel.fxml"));
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         stage.initStyle(StageStyle.TRANSPARENT);

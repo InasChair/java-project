@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -12,6 +11,8 @@
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
+
+<!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>-->
 
 <AnchorPane id="AnchorPane" fx:id="bp" maxHeight="-Infinity" prefHeight="600.0" prefWidth="1024.0" styleClass="parent" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inzyshotel.homeController">
    <children>
@@ -36,7 +37,11 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="134.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
                <children>
-                  <FontAwesomeIconView fill="#fffdee" glyphName="SEARCH" glyphStyle="-fx-fill:#FFE200" size="1.7em" text="" wrappingWidth="25.542851448059082" />
+                  <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/icon/icons8-home-page-90.png" />
+                     </image>
+                  </ImageView>
                   <JFXButton onMouseClicked="#home" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="HOME" wrapText="true" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets left="10.0" />
