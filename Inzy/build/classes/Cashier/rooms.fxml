@@ -201,13 +201,14 @@
             </VBox>
             <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="459.0" prefWidth="382.0">
                <children>
-                  <TableView fx:id="list" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="385.0">
+                  <TableView fx:id="list" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#endless" prefHeight="594.0" prefWidth="385.0">
                      <columns>
-                        <TableColumn fx:id="number" prefWidth="78.40002745389938" text="N°room" />
-                        <TableColumn fx:id="floor" prefWidth="55.19994354248047" text="Floor" />
-                        <TableColumn fx:id="beds" minWidth="0.0" prefWidth="60.800048828125" text="Beds" />
-                        <TableColumn fx:id="type" minWidth="1.5999755859375" prefWidth="90.4000244140625" text="type" />
-                        <TableColumn fx:id="price" minWidth="6.4000244140625" prefWidth="99.9999938964844" text="Price" />
+                        <TableColumn fx:id="number" prefWidth="56.799989342689514" text="N°room" />
+                        <TableColumn fx:id="floor" prefWidth="47.199951171875" text="Floor" />
+                        <TableColumn fx:id="beds" minWidth="0.0" prefWidth="51.99999237060547" text="Beds" />
+                        <TableColumn fx:id="type" minWidth="1.5999755859375" prefWidth="78.39996337890625" text="type" />
+                        <TableColumn fx:id="price" minWidth="6.4000244140625" prefWidth="61.5999755859375" text="Price" />
+                        <TableColumn fx:id="av" minWidth="6.4000244140625" prefWidth="89.60003051757815" text="availablity" />
                      </columns>
                      <VBox.margin>
                         <Insets />

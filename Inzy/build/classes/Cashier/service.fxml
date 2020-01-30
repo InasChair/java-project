@@ -13,6 +13,11 @@
 <VBox prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cashier.ServiceController">
    <children>
       <HBox maxHeight="-Infinity" maxWidth="-Infinity">
+         <VBox.margin>
+            <Insets left="772.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" text="Reservation">
                <font>
@@ -29,7 +34,7 @@
             </Label>
          </children>
          <VBox.margin>
-            <Insets bottom="50.0" left="200.0" />
+            <Insets bottom="50.0" left="220.0" />
          </VBox.margin>
       </HBox>
       <HBox maxHeight="-Infinity" maxWidth="-Infinity">

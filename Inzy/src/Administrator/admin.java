@@ -13,7 +13,7 @@ public class admin extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root;        
-        root = FXMLLoader.load(getClass().getResource("admin_panel.fxml"));
+        root = FXMLLoader.load(getClass().getResource("rooms.fxml"));
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         stage.initStyle(StageStyle.TRANSPARENT);

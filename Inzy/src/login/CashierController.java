@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package login;
 
 import java.net.URL;
@@ -12,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import Model.*;
+import Model.Auth;
 import java.io.IOException;
 import java.sql.SQLException;
 import javafx.application.Application;
@@ -41,7 +38,7 @@ public class CashierController   implements Initializable {
       
         
         if (auth.User(user,pass).first()==true) {
-            
+            System.out.println("yassine");
     Stage s=new Stage();
   FXMLLoader Loader  = new FXMLLoader();
                    Loader.setLocation(getClass().getResource("/Cashier/reservation.fxml"));
@@ -77,5 +74,3 @@ public class CashierController   implements Initializable {
 
 
     }
-    
-    

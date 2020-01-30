@@ -5,9 +5,6 @@
  */
 package Cashier;
 
-import DAO.*;
-import Model.*;
-import DB_objects.*;
 import com.jfoenix.controls.JFXDatePicker;
 import java.io.IOException;
 import java.net.URL;
@@ -26,9 +23,17 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
+import DB_objects.*;
+import Model.*;
+import DB_objects.DB_customers;
+import DB_objects.Details;
+import DB_objects.detail_services;
+import DB_objects.room;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTimePicker;
+import java.awt.BorderLayout;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 /**
  * FXML Controller class
@@ -39,9 +44,9 @@ public class ServiceController implements Initializable {
 
  Controlleur c = new Controlleur();
 
-    private String datedeb;
+    private LocalDate datedeb;
 
-    private String datefin;
+    private LocalDate  datefin;
 
     private int id1;
 
@@ -64,7 +69,7 @@ public class ServiceController implements Initializable {
     private Label RFrom_D1;
 
     @FXML
-    private JFXDatePicker datedeb1;
+    private JFXDatePicker datedeb1=null;
 
     @FXML
     private JFXCheckBox ch2;
@@ -159,24 +164,71 @@ public class ServiceController implements Initializable {
             alert.showAndWait();
             return ;
         }
-          
-             
-             
-            int total = 0;
 
+                if (ch1.isSelected() == true) {
+               if (datedeb1.getValue().compareTo(datefin)>0|| datedeb1.getValue().compareTo(datedeb)<0 )
+               {
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+             alert.setContentText("date service isn't compatible with reservation room date");
+            alert.showAndWait();
+             
+             return ;
+               }}
+                if (ch2.isSelected() == true) {
+                if((datedeb2.getValue().compareTo(datefin)>0|| datedeb2.getValue().compareTo(datedeb)<0 ))
+                {
+                 Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+             alert.setContentText("date service isn't compatible with reservation room date");
+            alert.showAndWait();
+             
+             return ;}}
+             if (ch3.isSelected() == true) {
+                if((datedeb3.getValue().compareTo(datefin)>0|| datedeb3.getValue().compareTo(datedeb)<0 ))
+                {
+                 Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+             alert.setContentText("date service isn't compatible with reservation room date");
+            alert.showAndWait();
+             
+             return ;}
+             }
+              if (ch4.isSelected() == true) {
+                if((datedeb4.getValue().compareTo(datefin)>0|| datedeb4.getValue().compareTo(datedeb)<0 ))
+                {
+                 Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+             alert.setContentText("date service isn't compatible with reservation room date");
+            alert.showAndWait();
+             
+             return ;}}
+            int total = 0;
+            float v1,v2,v3,v4 ;
+            
             if (ch1.isSelected() == true) {
-                total += 100;
+                v1= c.selectservice("price", 1);
+                total += v1;
             }
             if (ch2.isSelected() == true) {
-                total += 100;
+             v2= c.selectservice("price", 2);
+                total += v2;
             }
             if (ch3.isSelected() == true) {
-                total += 100;
+              v3= c.selectservice("price", 3);
+                total += v3;
             }
             if (ch4.isSelected() == true) {
-                total += 100;
+              v4= c.selectservice("price", 4);
+                total += v4;
             }
-           DB_customers costumer = new DB_customers(nom, prenom,ci, sexe,phone, email);
+            DB_customers costumer = new DB_customers(nom, prenom,
+                     ci, sexe,
+                    phone, email);
             int teste = 0;
             Vector<DB_customers> costumer1 = c.selectclient();
 
@@ -196,30 +248,30 @@ public class ServiceController implements Initializable {
 ////            //insrer dans les autre table
             c.insertreservation(costumer, total + duration * c.selectprice(id1), 1);
             Details D = new Details(c.getidreservation(), id1,
-                     datedeb,
-                     datefin,
+                     datedeb.toString(),
+                     datefin.toString(),
                     duration * c.selectprice(id1));
             c.insertdetails(D);
-            room M = c.findRoom(id1);
 
-            M.changerstatus();
-
-            c.updateroom(M);
             
             if (ch1.isSelected() == true) {
-               
-                detail_services DS1 = new detail_services(1,c.getiddetails(),datedeb1.getValue().toString(),T1.getValue().toString(),100);
+         detail_services DS1 = new detail_services(1,c.getiddetails(),datedeb1.getValue().toString(),T1.getValue().toString(),100);
                 c.insererdetailsservice(DS1);
             }
             if (ch2.isSelected() == true) {
+                
+               
                detail_services DS2 = new detail_services(2,c.getiddetails(),datedeb2.getValue().toString(),T2.getValue().toString(),100);
                 c.insererdetailsservice(DS2);
             }
             if (ch3.isSelected() == true) {
+                
+                 
                   detail_services DS3 = new detail_services(3,c.getiddetails(),datedeb3.getValue().toString(),T3.getValue().toString(),100);
                 c.insererdetailsservice(DS3);
             }
             if (ch4.isSelected() == true) {
+                
                   detail_services DS4 = new detail_services(4,c.getiddetails(),datedeb4.getValue().toString(),T4.getValue().toString(),100);
                 c.insererdetailsservice(DS4);
 
@@ -245,7 +297,7 @@ public class ServiceController implements Initializable {
 
     }
 
-    public void transfert(String datedeb, String datefin, int id1, String nom, String prenom, String ci, String sexe, String phone, String email, float duration) {
+    public void transfert(LocalDate datedeb, LocalDate datefin, int id1, String nom, String prenom, String ci, String sexe, String phone, String email, float duration) {
         this.datedeb = datedeb;
         this.datefin = datefin;
         this.id1 = id1;

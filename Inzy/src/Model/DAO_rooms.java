@@ -53,7 +53,7 @@ public class DAO_rooms {
   System.out.println(qr);
   rs = statement.executeQuery(qr);
   while(rs.next()){
-            DB_rooms r = new DB_rooms(rs.getString("id"),rs.getString("floor"),rs.getString("type"),rs.getString("state"),rs.getString("beds"),rs.getString("price"),rs.getString("av"));
+            DB_rooms r = new DB_rooms(rs.getString("id"),rs.getString("floor"),rs.getString("type"),rs.getString("beds"),rs.getString("price"),rs.getString("av"));
             dt.add(r); 
          } 
   return dt;
@@ -69,7 +69,7 @@ public class DAO_rooms {
              
                while(rs.next()){
                  
-                   DB_rooms r = new DB_rooms(rs.getString("id"),rs.getString("floor"),rs.getString("type"),rs.getString("state"),rs.getString("beds"),rs.getString("price"),rs.getString("price"));
+                   DB_rooms r = new DB_rooms(rs.getString("id"),rs.getString("floor"),rs.getString("type"),rs.getString("beds"),rs.getString("price"),rs.getString("price"));
                    dt.add(r);
                }
                return dt;

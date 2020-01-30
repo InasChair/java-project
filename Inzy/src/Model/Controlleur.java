@@ -163,44 +163,44 @@ public class Controlleur {
         
         return a;
   }
-  public void updateroom(room M)
-  {
-       
-        
-        String updateQuery = "UPDATE rooms "
-                           + "SET floor = " + M.getFloor()+ ", "
-                             + " type = " + "'" +M.getType()+ "', "
-                             + " Beds = " +  M.getBed()+ ", "
-                             + " description = " + "'" +M.getDescription() + "', "
-                             + " price = " +  +M.getPrice()+ ", "
-                              + " state = " + "'" +M.getState()+"'"
-                           + "WHERE rooms.id = " + M.getId()+ ";";
-        
-      System.out.println(M.getState());
-       
-        
-        
-        data.OPDML(updateQuery);
-        data.close();
-    }
-  public room findRoom(int id)
-  {
-      room M=null;
-      String requete = "select * from  rooms where id='"+id+ "' ;";
-       ResultSet rs=null;
-              rs= data.SELECT(requete);
-       try {
-           if( rs.next()==true){
-         M=new room(rs.getInt("floor"),rs.getString("type"),rs.getInt("beds"),rs.getDouble("price"),rs.getString("description"),rs.getString("state"));
-            
-        M.setId(id);}
-            
-        } catch (Exception ex) {
-            data.excep(ex);
-        } 
-        
-        return M;
-  }
+//  public void updateroom(room M)
+//  {
+//       
+//        
+//        String updateQuery = "UPDATE rooms "
+//                           + "SET floor = " + M.getFloor()+ ", "
+//                             + " type = " + "'" +M.getType()+ "', "
+//                             + " Beds = " +  M.getBed()+ ", "
+//                             + " description = " + "'" +M.getDescription() + "', "
+//                             + " price = " +  +M.getPrice()+ ", "
+//                              + " state = " + "'" +M.getState()+"'"
+//                           + "WHERE rooms.id = " + M.getId()+ ";";
+//        
+//      System.out.println(M.getState());
+//       
+//        
+//        
+//        data.OPDML(updateQuery);
+//        data.close();
+//    }
+//  public room findRoom(int id)
+//  {
+//      room M=null;
+//      String requete = "select * from  rooms where id='"+id+ "' ;";
+//       ResultSet rs=null;
+//              rs= data.SELECT(requete);
+//       try {
+//           if( rs.next()==true){
+//         M=new room(rs.getInt("floor"),rs.getString("type"),rs.getInt("beds"),rs.getDouble("price"),rs.getString("description"),rs.getString("state"));
+//            
+//        M.setId(id);}
+//            
+//        } catch (Exception ex) {
+//            data.excep(ex);
+//        } 
+//        
+//        return M;
+//  }
   ////detail_service
   public boolean insererdetailsservice(detail_services d)
   {
@@ -232,7 +232,26 @@ public class Controlleur {
         
         return a;  
   }
+      public float selectservice(String var,int id)
+  {
       
+        float a=0;
+      String requete = "select "+var+" from services where id='"+id+"' ;";
+       ResultSet rs=data.SELECT(requete);
+       try {
+            rs.next();
+          a=   rs.getFloat("price");
+            
+        
+            
+        } catch (Exception ex) {
+            data.excep(ex);
+        } 
+        
+        return a;  
+  }
+      
+   
   }
 
 

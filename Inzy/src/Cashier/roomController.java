@@ -22,15 +22,20 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 /**
  *
@@ -52,6 +57,7 @@ public class roomController implements Initializable {
     private DatePicker  dt1;
     @FXML
     private DatePicker dt2;
+    static MouseEvent event;
     @FXML
     private TableColumn<DB_rooms,String> number;
     
@@ -118,12 +124,38 @@ public class roomController implements Initializable {
         intCols();
     }
     public void intCols(){  
+        
        number.setCellValueFactory(new PropertyValueFactory<>("number"));
        floor.setCellValueFactory(new PropertyValueFactory<DB_rooms, String>("floor"));
        type.setCellValueFactory(new PropertyValueFactory<DB_rooms, String>("type"));
        price.setCellValueFactory(new PropertyValueFactory<DB_rooms, String>("price"));
        beds.setCellValueFactory(new PropertyValueFactory<DB_rooms, String>("beds"));
+       av.setCellValueFactory(new PropertyValueFactory<DB_rooms, String>("av"));
+       list.setRowFactory(tableView -> {
+    final TableRow<DB_rooms> row = new TableRow<>();
+      
+    row.hoverProperty().addListener((observable) -> {
+         DB_rooms rr = row.getItem();
+       
+        if (row.isFocused() && rr != null) {
+             if(rr.getAv().compareToIgnoreCase("available")!=0)
+             {Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+             alert.setContentText("this roon isn't available, chose another one please!!" );
+            alert.showAndWait();
+             }
+             else{
+               
+         ReservationController.sliver=rr;
+            Stage window =(Stage)((Node)this.event.getSource()).getScene().getWindow();
+        window.close();
+             }
+        } 
+    });
 
+    return row;
+});
     }
 
    
@@ -215,5 +247,20 @@ public class roomController implements Initializable {
     }
     
     
+ 
+    //////////////////////////////////////////////////////////////////////////////
+
+    public void sendin(LocalDate kk,LocalDate rr){
+        dt1.setValue(kk);
+        dt2.setValue(rr);
+      
+}     
+        @FXML
+    void endless(MouseEvent event) {
+        this.event = event;
+      
+    }
+
 }
+
 

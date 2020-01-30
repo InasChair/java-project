@@ -30,6 +30,7 @@ import javafx.util.converter.DoubleStringConverter;
 import javafx.util.converter.IntegerStringConverter;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
 import jdk.nashorn.internal.objects.NativeArray;
 
 /**
@@ -110,31 +111,54 @@ public class RoomsController implements Initializable {
     }    
 
     @FXML
-    private void Search(ActionEvent event) throws SQLException {
+    private void Search(ActionEvent event) {
       
-           if(byType.isSelected())if((t = Types.getValue())==null) t = "";
-           else t = "";
-           if(byFloor.isSelected())if((f= Floors.getValue())==null)f = 0;
-           else f =0;
-           if(byBeds.isSelected())if((b = Beds.getValue())==null) b=0;
-           else b =0;
+        int temp = 1;
+           if(byType.isSelected())
+               if((t = Types.getValue())==null) temp = 0;
+      
+           if(byFloor.isSelected())if((f= Floors.getValue())==null)temp = 0;
+     
+           if(byBeds.isSelected())if((b = Beds.getValue())==null) temp = 0;
+          
            if(byPrice.isSelected()){
                String pr = Price.getText();
 
-            if("".equals(pr)) p = 0.0;
+            if("".equals(pr)) temp = 0;
             else   p = toDouble.fromString(pr);
            }
 
             if(byAcces.isSelected()){
            if(s.equals(Access.getText())) s= "not available";
-        else s = Access.getText(); 
+           else s = Access.getText(); 
         }
-        else s ="";
-          
-           roomsTable.setItems(null);
-           rooms = new roomModel().Rooms(f,t,b,p,s);
+      
+        if(temp == 0){
+               Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            
+                alert.setTitle("information Dialog");
+                alert.setHeaderText("Connetion problems ");
+              //  alert.setContentText("");
+                alert.showAndWait();
+          }
+         else {
+             roomsTable.setItems(null);
+        try {
+            rooms = new roomModel().Rooms(f,t,b,p,s);
+        } catch (SQLException ex) {
+            {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            
+                alert.setTitle("information Dialog");
+                alert.setHeaderText("Look, make a choice from the list ");
+              // alert.setContentText("");
+                alert.showAndWait();
+        }
+        }
           roomsTable.setItems(rooms);
           initTable();     
+          }
+    
     }
     
     public void initTable(){

@@ -3,34 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Administrator/admin_panel.fxml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Model/DAO_customers.java</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/ReservationController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DB_objects/room.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DB_objects/DB_rooms.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/login/CashierController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/ServiceController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/nbproject/build-impl.xml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DAO/DaoBD.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DB_objects/Details.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DB_objects/detail_services.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Model/Auth.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/css/stylesheet.css</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/customerController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/reservation.fxml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Model/serviceModel.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DAO/DataBase.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DB_objects/DB_customers.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Model/DAO_rooms.java</file>
+            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/login/administrator.fxml</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/login/AdministratorController.java</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Administrator/admin.java</file>
+            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Administrator/Piechart.java</file>
+            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/ServiceController.java</file>
+            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/login/CashierController.java</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/roomController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Model/roomModel.java</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/login/Launch.java</file>
             <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Model/Controlleur.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/cashier_panel.fxml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/cashier.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/login/MainController.java</file>
+            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Model/Auth.java</file>
+            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/login/cashier.fxml</file>
+            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/login/Main.fxml</file>
+            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Model/ChartModel.java</file>
         </group>
     </open-files>
 </project-private>

@@ -227,7 +227,7 @@
                   <Insets right="20.0" />
                </HBox.margin>
             </JFXTextField>
-            <JFXButton onAction="#click" prefHeight="34.0" prefWidth="65.0" styleClass="trs-btn" stylesheets="@../css/stylesheet.css" text="Check" textFill="#9a9364">
+            <JFXButton onAction="#check" prefHeight="34.0" prefWidth="65.0" styleClass="trs-btn" stylesheets="@../css/stylesheet.css" text="Check" textFill="#9a9364">
                <font>
                   <Font name="Alef Bold" size="15.0" />
                </font>

@@ -23,7 +23,7 @@ public class Auth {
     public Auth() {
         dao = new DaoBD();
         dao.setPilote("com.mysql.jdbc.Driver");
-        dao.setUrl("jdbc:mysql://localhost:3306/hotel");
+        dao.setUrl("jdbc:mysql://localhost:3306/java_inzy");
         dao.setLogin("root");
         dao.setPassword("");
         dao.Connect();
@@ -32,7 +32,7 @@ public class Auth {
     public ResultSet User(String user,String pass){
           ResultSet Res = null;
           try {
-            St = Con.createStatement();
+           St = Con.createStatement();
             Res = St.executeQuery("SELECT * FROM `auths` WHERE username ='"+user +"' and password = '"+pass+"'");
         } catch (SQLException ex) {
              System.out.println("Erreur dans la requete select ou ST , " + ex.getMessage());

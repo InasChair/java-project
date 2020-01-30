@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
+import java.io.IOException;
 import java.net.URL;
 import java.time.temporal.ChronoUnit;
 import java.util.ResourceBundle;
@@ -30,7 +31,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -41,6 +44,8 @@ import javafx.stage.Stage;
 
 public class ReservationController implements Initializable {
           Controlleur c = new Controlleur();
+                  
+
      @FXML
     private JFXTextField nom;
 
@@ -58,6 +63,12 @@ public class ReservationController implements Initializable {
 
     @FXML
     private JFXTextField id1;
+    
+     @FXML
+    private JFXTextField id11;
+     
+      @FXML
+    private JFXTextField id12;
 
     @FXML
     private Label RFrom_D;
@@ -74,14 +85,13 @@ public class ReservationController implements Initializable {
   
 
     @FXML
-    void click(ActionEvent event) {
-        
-         
-if(nom.getText().trim().isEmpty() ||
+  
+        void click(ActionEvent event) {
+        if(nom.getText().trim().isEmpty() ||
                 prenom.getText().trim().isEmpty() || ci.getText().trim().isEmpty()
-                || sexe.getValue()==""
+                || sexe.getValue()=="" || id1.getText().trim().isEmpty() || id11.getText().trim().isEmpty()||id12.getText().trim().isEmpty()
                 ||  phone.getText().trim().isEmpty()
-                    || email.getText().trim().isEmpty() || id1.getText().trim().isEmpty()
+                    || email.getText().trim().isEmpty() 
                 ||datedeb.getValue()==null || datefin.getValue()==null)
         {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -92,34 +102,16 @@ if(nom.getText().trim().isEmpty() ||
             
         }
         else{
-               if(datedeb.getValue().compareTo(datefin.getValue())<0){
+               if(datedeb.getValue().compareTo(datefin.getValue())>0){
                    Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");
             alert.setHeaderText(null);
-             alert.setContentText("Wrong end reservation.fix it please!");
+             alert.setContentText("Wrong end reservation,fix it please!");
             alert.showAndWait();
             return;
                }
                else{
-                   
-               
-              room M=null;
-                M=  c.findRoom(Integer.parseInt(id1.getText()));
-                if(M==null || M.getState().compareTo("libre")!=0)
-                {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Warning");
-            alert.setHeaderText(null);
-             alert.setContentText("The room  isn't available,Please chose another one!");
-            alert.showAndWait();
-            return;
-                    
-                }
-                else
-         
-                {
-        
-         
+            
       //creer le client
        DB_customers costumer=new DB_customers(nom.getText(),prenom.getText()
                ,ci.getText(),sexe.getValue().toString(),
@@ -147,50 +139,50 @@ if(nom.getText().trim().isEmpty() ||
            float duration= ChronoUnit.DAYS.between(datedeb.getValue(),datefin.getValue());
           
           
-           c.insertreservation(costumer, duration * c.selectprice(Integer.parseInt(id1.getText())), 1);
-           Details D= new Details(c.getidreservation(),Integer.parseInt(id1.getText())
+           c.insertreservation(costumer, duration * c.selectprice(idf), 1);
+           Details D= new Details(c.getidreservation(),idf
                    ,datedeb.getValue().toString()
                    ,datefin.getValue().toString(),
-                   duration*c.selectprice(Integer.parseInt(id1.getText())));
+                   duration*c.selectprice(idf));
            c.insertdetails(D);
-         room ss=c.findRoom(Integer.parseInt(id1.getText()));
+     
         
-         ss.changerstatus();
+      
         
-         c.updateroom(ss);
+      
          ci.setText("");
         
         email.setText("");
         id1.setText("");
         phone.setText("");
         prenom.setText("");
-           sexe.setValue("");       
-             nom.setText("");
+        sexe.setValue("");       
+        nom.setText("");
              
-             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-alert.setTitle("Information Dialog");
-alert.setHeaderText(null);
-alert.setContentText("the reservation was registered successfuly");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information Dialog");
+            alert.setHeaderText(null);
+            alert.setContentText("the reservation was registered successfuly");
 
 alert.showAndWait();
     
         }}}
         
         
-    }
+    
     @FXML
     void click2(ActionEvent event) throws Exception{
      if(nom.getText().trim().isEmpty() ||
                 prenom.getText().trim().isEmpty() || ci.getText().trim().isEmpty()
                 
                 || sexe.getValue()=="" ||  phone.getText().trim().isEmpty()
-                    || email.getText().trim().isEmpty() || id1.getText().trim().isEmpty()
+                    || email.getText().trim().isEmpty() || id1.getText().trim().isEmpty() || id11.getText().trim().isEmpty()||id12.getText().trim().isEmpty()
                 ||datedeb.getValue()==null || datefin.getValue()==null)
         {
              Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");
             alert.setHeaderText(null);
-             alert.setContentText("Fill all the blancks,Please!");
+            alert.setContentText("Fill all the blancks,Please!");
             alert.showAndWait();
      }else{
          
@@ -198,8 +190,8 @@ alert.showAndWait();
          Parent root =(Parent)Loader.load();
         
             ServiceController hkproto = Loader.getController();
-           hkproto.transfert(datedeb.getValue().toString(), datefin.getValue().toString(), 
-                   Integer.parseInt(id1.getText()), nom.getText(),
+           hkproto.transfert(datedeb.getValue(), datefin.getValue(), 
+                  idf, nom.getText(),
                    prenom.getText(), ci.getText(), sexe.getValue(),
                    phone.getText(), email.getText(),ChronoUnit.DAYS.between(datedeb.getValue(),datefin.getValue()));
                 Scene scene1 =new Scene(root);
@@ -247,4 +239,29 @@ alert.showAndWait();
     sexe.setItems(FXCollections.observableArrayList(s));
     
 }
+    /////////////////////////////////////////////////////////////////////////////////////////
+    int idf;
+     public static  DB_rooms sliver =null;
+        @FXML
+    void check(ActionEvent event) throws IOException, InterruptedException {
+  Stage stage =new Stage();
+
+    FXMLLoader Loader  = new FXMLLoader();
+                   Loader.setLocation(getClass().getResource("rooms.fxml"));
+              roomController turn= Loader.getController();  
+//                    turn.sendin(datedeb.getValue(),datefin.getValue());
+                    Parent root =(Parent)Loader.load();
+                    
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.setScene(scene);
+        stage.showAndWait();
+       
+    id1.setText(sliver.getType());
+       id11.setText(sliver.getBeds());
+        id12.setText(sliver.getPrice());
+        idf=Integer.parseInt(sliver.getNumber());
+    }
+    
 }

@@ -46,16 +46,10 @@ public class homeController implements Initializable {
     private void rooms(MouseEvent event) {
     }
 
-    @FXML
-    private void add_service(MouseEvent event) {
-    }
-
-    @FXML
-    private void statistics(MouseEvent event) {
-    }
 
     @FXML
     private void about_us(MouseEvent event) {
     }
+
     
 }

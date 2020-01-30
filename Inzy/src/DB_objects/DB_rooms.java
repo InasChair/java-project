@@ -14,7 +14,6 @@ public class DB_rooms {
     private String floor;
     private String type;
     private String beds;
-    private String state;
     private String price;
     private String av;
 
@@ -26,22 +25,14 @@ public class DB_rooms {
         this.av = av;
     }
 
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
     
-    public DB_rooms(String n, String f, String t,String state, String b, String p,String av)
+    public DB_rooms(String n, String f, String t, String b, String p,String av)
     {
      this.number = n;
      this.floor = f;
      this.type = t;
      this.beds = b;
      this.price = p;
-     this.state = state;
      this.av = av;
     }
 

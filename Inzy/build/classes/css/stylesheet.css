@@ -46,3 +46,7 @@
 .sidebar{
     -fx-background-color: #000000;
 }
+
+iconBar:hover{
+    -fx-cursor: hand;
+}

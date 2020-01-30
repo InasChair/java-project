@@ -6,6 +6,7 @@
 package login;
 
 import Model.*;
+import com.jfoenix.controls.JFXPasswordField;
 import javafx.scene.control.TextField;
 import java.io.IOException;
 import java.net.URL;
@@ -40,9 +41,8 @@ public class AdministratorController implements Initializable {
     @FXML
     private TextField aserial;
 
-    @FXML
-    private TextField apassword;
-
+        @FXML
+    private JFXPasswordField apassword;
 //    
 //    
    
@@ -57,7 +57,7 @@ public class AdministratorController implements Initializable {
       
         
         if (auth.Admin(user,pass,ser).first()==true) {
-            System.out.println("yassine");
+           
     Stage s=new Stage();
               Parent root = FXMLLoader.load(getClass().getResource("/Cashier/reservation.fxml"));
                  Scene scene = new Scene(root);
