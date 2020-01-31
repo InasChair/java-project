@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrator.Add_serviceController">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Service " textFill="#ffe300">
+               <font>
+                  <Font name="Alef Bold" size="44.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="management ">
+               <font>
+                  <Font name="Alef Bold" size="44.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets left="180.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="534.0" prefWidth="764.0">
+         <children>
+            <VBox prefHeight="538.0" prefWidth="379.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="137.0" text="Add service ">
+                     <font>
+                        <Font name="Alef Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="50.0" left="30.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="88.0" prefHeight="36.0" prefWidth="361.0">
+                     <children>
+                        <Label fx:id="labelName" prefHeight="28.0" prefWidth="153.0" text="Name">
+                           <font>
+                              <Font name="Alef Regular" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="Name" />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="392.0" prefHeight="36.0" prefWidth="361.0">
+                     <children>
+                        <Label fx:id="labelPrice" prefHeight="28.0" prefWidth="153.0" text="Price">
+                           <font>
+                              <Font name="Alef Regular" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="Price" />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="36.0" prefWidth="361.0">
+                     <children>
+                        <Label fx:id="labelDesc" prefHeight="28.0" prefWidth="153.0" text="Description">
+                           <font>
+                              <Font name="Alef Regular" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="Desc" />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="errorMesssage" prefHeight="35.0" prefWidth="337.0" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="228.0" prefHeight="36.0" prefWidth="361.0">
+                     <children>
+                        <JFXButton onAction="#Add" prefHeight="30.0" prefWidth="159.0" styleClass="yellow-btn" text="ADD">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" top="25.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="60.0" />
+                     </padding>
+                  </HBox>
+                  <ImageView fitHeight="86.0" fitWidth="212.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="150.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../images/images/pinzy-03.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="534.0" prefWidth="472.0">
+               <children>
+                  <TableView fx:id="serviceTable" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="430.0">
+                     <columns>
+                        <TableColumn fx:id="serviceId" prefWidth="34.0" text="ID" />
+                        <TableColumn fx:id="serviceName" prefWidth="91.0" text="Name" />
+                        <TableColumn fx:id="servicePrice" prefWidth="76.0" text="Price" />
+                        <TableColumn fx:id="serviceDesc" prefWidth="166.0" text="Description" />
+                        <TableColumn fx:id="serviceUpdate" prefWidth="61.0" text="Update" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
