@@ -45,12 +45,12 @@
             </JFXButton>
             <ImageView fitHeight="211.0" fitWidth="341.0" layoutX="494.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/images/down.PNG" />
+                  <Image url="@../images/images/down.PNG" />
                </image>
             </ImageView>
             <ImageView fitHeight="151.0" fitWidth="215.0" layoutX="290.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/images/up.jpg" />
+                  <Image url="@../images/images/up.jpg" />
                </image>
             </ImageView>
             <VBox fx:id="vbox" layoutX="14.0" layoutY="-40.0" prefHeight="480.0" prefWidth="480.0" styleClass="white-pane" />

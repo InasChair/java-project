@@ -16,10 +16,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cashier.roomController">
+<AnchorPane style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cashier.roomController">
    <children>
-      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" stylesheets="@../css/stylesheet.css">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="800.0" stylesheets="@../css/stylesheet.css">
          <children>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity">
                <children>
@@ -135,7 +134,7 @@
                                     <Insets right="-25.0" />
                                  </HBox.margin>
                               </JFXCheckBox>
-                              <TextField fx:id="txtp" prefHeight="26.0" prefWidth="150.0">
+                              <TextField fx:id="txtp" opacity="0.55" prefHeight="26.0" prefWidth="150.0" text="Maximum Price">
                                  <HBox.margin>
                                     <Insets left="110.0" />
                                  </HBox.margin>

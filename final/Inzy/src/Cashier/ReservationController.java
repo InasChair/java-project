@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
+import static com.sun.org.apache.regexp.internal.RETest.test;
 import java.io.IOException;
 import java.net.URL;
 import java.time.temporal.ChronoUnit;
@@ -31,9 +32,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import static jdk.nashorn.internal.objects.NativeRegExp.test;
 
 /**
  * FXML Controller class
@@ -73,6 +76,8 @@ public class ReservationController implements Initializable {
      
       @FXML
     private JFXTextField id12;
+        @FXML
+    private AnchorPane test;
 
     @FXML
     private Label RFrom_D;
@@ -94,7 +99,7 @@ public class ReservationController implements Initializable {
         if(nom.getText().trim().isEmpty() 
                 ||prenom.getText().trim().isEmpty() 
                 || ci.getText().trim().isEmpty()
-                || ci.getText().trim().isEmpty()
+                || ci1.getText().trim().isEmpty()
                 || sexe.getValue()=="" 
                 || id1.getText().trim().isEmpty() 
                 || id11.getText().trim().isEmpty()
@@ -162,7 +167,7 @@ public class ReservationController implements Initializable {
        c.insertdetails(D);     
       
         ci.setText("");
-       ci1.setText("");
+        ci1.setText("");
         email.setText("");
         id1.setText("");
         phone.setText("");
@@ -201,8 +206,9 @@ public class ReservationController implements Initializable {
             alert.showAndWait();
      }else{
          
-         FXMLLoader Loader = new FXMLLoader(getClass().getResource("service.fxml"));
-         Parent root =(Parent)Loader.load();
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("service.fxml"));
+        
+        AnchorPane root =Loader.load();
         
             ServiceController hkproto = Loader.getController();
             hkproto.transfert(
@@ -217,12 +223,7 @@ public class ReservationController implements Initializable {
                     email.getText(),
                     ChronoUnit.DAYS.between(datedeb.getValue(),
                     datefin.getValue()));
-            
-                Scene scene1 =new Scene(root);
-        Stage window =(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scene1);
-        window.show();
-        
+                    test.getChildren().setAll(root);
      }
     
     }
@@ -242,11 +243,19 @@ public class ReservationController implements Initializable {
                         this.phone.setText(c.getPhone());
                         this.sexe.setValue(c.getSexe());
                         this.prenom.setText(c.getPrenom());
-                        this.nom.setText(c.getNom());
+                        //this.nom.setText(c.getNom());
                         return ;
                 }
                 else {
-                    this.ci1.setText(c.getCi());
+                    this.ci1.setText(ci.getText());
+                    email.clear();
+                    nom.clear();
+                    phone.clear();
+                    sexe.setCache(false);
+                    
+                    prenom.clear();
+                    
+                    
                     return;
                 }
             }

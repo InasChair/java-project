@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="713.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="-1.0" layoutY="140.0" prefHeight="70.0" prefWidth="318.0" text="Projet Java:" AnchorPane.leftAnchor="-1.0">
          <font>
@@ -17,9 +17,9 @@
             <Insets left="50.0" />
          </padding>
       </Label>
-      <ImageView fitHeight="105.0" fitWidth="710.0" layoutX="91.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="91.0">
+      <ImageView fitHeight="145.0" fitWidth="195.0" layoutX="86.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="86.0">
          <image>
-            <Image url="@../images/images/Capture.PNG" />
+            <Image url="@../images/images/0.png" />
          </image>
       </ImageView>
       <Label layoutX="263.0" layoutY="187.0" prefHeight="45.0" prefWidth="422.0" text="Système de gestion hôtelière " textFill="#ffe300">
@@ -100,6 +100,11 @@
       <ImageView fitHeight="120.0" fitWidth="399.0" layoutX="594.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/images/freeze-motion-yellow-powder-explosions-isol5ated-white-background_36888-68.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="141.0" layoutX="570.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/images/pinzy-03.png" />
          </image>
       </ImageView>
    </children>

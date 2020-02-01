@@ -63,7 +63,7 @@ public class customerController implements Initializable{
                 if(rlname.isEmpty())
                 {   Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("information Dialog");
-                    alert.setHeaderText("Look, Enter the last name please");
+                    alert.setHeaderText("Enter last name please");
                     alert.setContentText("!");
                     alert.showAndWait();
                 }
@@ -77,7 +77,7 @@ public class customerController implements Initializable{
                 if(rfiname.isEmpty())
                 {   Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("information Dialog");
-                    alert.setHeaderText("Look, Enter the first name please");
+                    alert.setHeaderText("Enter first name please");
                     alert.setContentText("!");
                     alert.showAndWait();
                 }
@@ -91,7 +91,7 @@ public class customerController implements Initializable{
                 if(rci.isEmpty())
                 {   Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("information Dialog");
-                    alert.setHeaderText("Look, Enter the cin or the passeport number please");
+                    alert.setHeaderText("Enter  cin or passeport number please");
                     alert.setContentText("!");
                     alert.showAndWait();
                 }
@@ -106,7 +106,7 @@ public class customerController implements Initializable{
                 if(rroomnub.isEmpty())
                 {   Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("information Dialog");
-                    alert.setHeaderText("Look, Enter the room number please");
+                    alert.setHeaderText("Enter room number please");
                     alert.setContentText("!");
                     alert.showAndWait();
                 }
@@ -115,10 +115,9 @@ public class customerController implements Initializable{
                    param+= " having nr = "+rroomnub; 
                 }
                 }
-                
+           iddoc.setCellValueFactory(new PropertyValueFactory<>("ci"));    
            lname.setCellValueFactory(new PropertyValueFactory<>("nom"));
            fname.setCellValueFactory(new PropertyValueFactory<>("prenom"));
-           iddoc.setCellValueFactory(new PropertyValueFactory<>("ci"));
            nroom.setCellValueFactory(new PropertyValueFactory<>("roomid"));
            liste.setItems((new DAO_customers()).getcustomers(param));
         }

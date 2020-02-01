@@ -150,7 +150,7 @@ public class RoomsController implements Initializable {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
             
                 alert.setTitle("information Dialog");
-                alert.setHeaderText("Look, make a choice from the list ");
+                alert.setHeaderText("You should make a choice from the list ");
               // alert.setContentText("");
                 alert.showAndWait();
         }

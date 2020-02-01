@@ -34,6 +34,7 @@ import com.jfoenix.controls.JFXTimePicker;
 import java.awt.BorderLayout;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
@@ -65,6 +66,9 @@ public class ServiceController implements Initializable {
         @FXML
     private JFXCheckBox ch1;
 
+          @FXML
+    private AnchorPane test;
+          
     @FXML
     private Label RFrom_D1;
 
@@ -283,13 +287,10 @@ public class ServiceController implements Initializable {
 
            alert.showAndWait();
                    FXMLLoader Loader = new FXMLLoader(getClass().getResource("reservation.fxml"));
-         Parent root =(Parent)Loader.load();
+    AnchorPane root =Loader.load();
         
             
-                Scene scene1 =new Scene(root);
-        Stage window =(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scene1);
-        window.show();
+            test.getChildren().setAll(root);
            
         
         
@@ -312,13 +313,8 @@ public class ServiceController implements Initializable {
       @FXML
     void back(ActionEvent event) throws IOException {
         FXMLLoader Loader = new FXMLLoader(getClass().getResource("reservation.fxml"));
-         Parent root =(Parent)Loader.load();
-        
-            
-                Scene scene1 =new Scene(root);
-        Stage window =(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scene1);
-        window.show();
+           AnchorPane root =Loader.load();
+        test.getChildren().setAll(root);
     }
 
 

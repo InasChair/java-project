@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="579.0" prefWidth="513.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrator.PieController">
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrator.PieController">
     <children>
-      <VBox prefHeight="404.0" prefWidth="512.0">
+      <VBox layoutX="160.0" prefHeight="404.0" prefWidth="512.0">
          <children>
             <PieChart fx:id="mypie" />
          </children>
       </VBox>
-      <HBox layoutX="1.0" layoutY="411.0" prefHeight="41.0" prefWidth="512.0">
+      <HBox layoutX="144.0" layoutY="411.0" prefHeight="41.0" prefWidth="512.0">
          <children>
             <JFXDatePicker fx:id="fromDate" defaultColor="#676664" prefHeight="28.0" prefWidth="185.0" />
             <JFXDatePicker fx:id="toDate" defaultColor="#676664" prefWidth="185.0">
@@ -28,17 +28,11 @@
             <Insets left="50.0" />
          </padding>
       </HBox>
-      <HBox layoutX="1.0" layoutY="517.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#getPie" prefHeight="26.0" prefWidth="114.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="display">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </Button>
-         </children>
+      <HBox layoutX="161.0" layoutY="517.0">
          <padding>
             <Insets left="190.0" />
          </padding>
       </HBox>
+      <Button layoutX="359.0" layoutY="468.0" mnemonicParsing="false" onAction="#getPie" prefHeight="26.0" prefWidth="114.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="display" />
     </children>
 </AnchorPane>

@@ -35,7 +35,7 @@ public class DAO_customers {
       ObservableList<DB_customers> dt = FXCollections.observableArrayList(); 
       ResultSet rs ;
       Statement statement=Maconnexion.createStatement();
-       String qr="select nom,prenom,ci,max((case when sysdate() between start_in and end_in then d.room_id else null";
+       String qr="select ci,nom,prenom,max((case when sysdate() between start_in and end_in then d.room_id else null";
          qr+= " end)) nr from customers c, reservations r ,details d where c.id=r.customer_id and r.id=d.reservation_id ";
          qr+=param3;
          System.out.println(qr);

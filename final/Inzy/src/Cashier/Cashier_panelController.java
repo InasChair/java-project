@@ -30,7 +30,12 @@ public class Cashier_panelController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-      //To change body of generated methods, choose Tools | Templates.
+        try {
+            //To change body of generated methods, choose Tools | Templates.
+            loadPage("home.fxml");
+        } catch (IOException ex) {
+            Logger.getLogger(Cashier_panelController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     @FXML
@@ -113,7 +118,7 @@ loadPage("clients.fxml");
       
           //ici
                  Scene scene = new Scene(root);
-         //  scene.setFill(Color.TRANSPARENT);
+          scene.setFill(Color.TRANSPARENT);
           s.initStyle(StageStyle.TRANSPARENT);
         s.setScene(scene);
         s.show();

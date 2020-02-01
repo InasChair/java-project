@@ -81,7 +81,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="263.0" prefHeight="45.0" prefWidth="200.0" styleClass="tf_box">
          <children>
-            <JFXPasswordField fx:id="cpassword" focusColor="WHITE" labelFloat="true" opacity="0.45" prefHeight="46.0" prefWidth="439.0" promptText="Password" styleClass="tf" unFocusColor="#fafafa">
+            <JFXPasswordField fx:id="apassword" focusColor="WHITE" labelFloat="true" opacity="0.45" prefHeight="46.0" prefWidth="439.0" promptText="Password" styleClass="tf" unFocusColor="#fafafa">
                <font>
                   <Font size="16.0" />
                </font>

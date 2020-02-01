@@ -18,8 +18,8 @@ public class Launch extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));        
         Scene scene = new Scene(root);
-       scene.setFill(Color.TRANSPARENT);
-      stage.initStyle(StageStyle.TRANSPARENT);
+        scene.setFill(Color.TRANSPARENT);
+        stage.initStyle(StageStyle.TRANSPARENT);
         stage.setScene(scene);
         stage.show();
     }

@@ -1,5 +1,6 @@
 package Administrator;
 
+import Cashier.Cashier_panelController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -29,7 +30,11 @@ public class Admin_panelController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-      //To change body of generated methods, choose Tools | Templates.
+         try {
+            loadPage("/Cashier/home.fxml");
+        } catch (IOException ex) {
+            Logger.getLogger(Cashier_panelController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     @FXML
@@ -41,7 +46,7 @@ public class Admin_panelController implements Initializable {
    
      @FXML
     void reservation(ActionEvent event) throws IOException {
-loadPage("reservation.fxml");
+loadPage("/Cashier/reservation.fxml");
     }
 
     @FXML
@@ -50,12 +55,12 @@ loadPage("rooms.fxml");
     }
       @FXML
     void about_us(ActionEvent event) throws IOException {
-         loadPage("about_us.fxml");
+         loadPage("/Cashier/about_us.fxml");
     }
 
     @FXML
     void clients(ActionEvent event) throws IOException {
-loadPage("clients.fxml");
+loadPage("/Cashier/clients.fxml");
     }
 
    @FXML
@@ -71,7 +76,7 @@ loadPage("clients.fxml");
     }
      @FXML
     void home(ActionEvent event) throws IOException {
-       loadPage("home.fxml");
+       loadPage("/Cashier/home.fxml");
 
     }
 
@@ -121,7 +126,7 @@ loadPage("clients.fxml");
       
           //ici
                  Scene scene = new Scene(root);
-           //scene.setFill(Color.TRANSPARENT);
+           scene.setFill(Color.TRANSPARENT);
           s.initStyle(StageStyle.TRANSPARENT);
         s.setScene(scene);
         s.show();

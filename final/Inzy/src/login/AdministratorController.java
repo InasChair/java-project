@@ -59,7 +59,7 @@ public class AdministratorController implements Initializable {
         if (auth.Admin(user,pass,ser).first()==true) {
            
     Stage s=new Stage();
-              Parent root = FXMLLoader.load(getClass().getResource("/Cashier/reservation.fxml"));
+              Parent root = FXMLLoader.load(getClass().getResource("/Administrator/admin_panel.fxml"));
                  Scene scene = new Scene(root);
            scene.setFill(Color.TRANSPARENT);
           s.initStyle(StageStyle.TRANSPARENT);
@@ -74,7 +74,7 @@ public class AdministratorController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       
     }    
     
 }

@@ -196,8 +196,8 @@ public class roomController implements Initializable {
            if(rprice.isEmpty())
            {
                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("information Dialog");
-                alert.setHeaderText("Look, information must be filled");
+                alert.setTitle("Information Dialog");
+                alert.setHeaderText("Information must be filled");
                 alert.setContentText("please fill the maximal price!");
                 alert.showAndWait();
            }

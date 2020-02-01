@@ -69,7 +69,7 @@ public class DAO_rooms {
              
                while(rs.next()){
                  
-                   DB_rooms r = new DB_rooms(rs.getString("id"),rs.getString("floor"),rs.getString("type"),rs.getString("beds"),rs.getString("price"),rs.getString("price"));
+                   DB_rooms r = new DB_rooms(rs.getString("id"),rs.getString("floor"),rs.getString("type"),rs.getString("beds"),rs.getString("price"),rs.getString("state"));
                    dt.add(r);
                }
                return dt;
