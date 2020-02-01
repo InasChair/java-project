@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Cashier;
+package Controllers;
 
 import DAO.*;
 import Model.*;
@@ -206,7 +206,7 @@ public class ReservationController implements Initializable {
             alert.showAndWait();
      }else{
          
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("service.fxml"));
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/Cashier/service.fxml"));
         
         AnchorPane root =Loader.load();
         
@@ -284,7 +284,7 @@ public class ReservationController implements Initializable {
   Stage stage =new Stage();
 
     FXMLLoader Loader  = new FXMLLoader();
-                   Loader.setLocation(getClass().getResource("rooms.fxml"));
+                   Loader.setLocation(getClass().getResource("/Cashier/rooms.fxml"));
               roomController turn= Loader.getController();  
 //                    turn.sendin(datedeb.getValue(),datefin.getValue());
                     Parent root =(Parent)Loader.load();

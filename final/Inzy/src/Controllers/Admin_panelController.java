@@ -1,6 +1,5 @@
-package Administrator;
+package Controllers;
 
-import Cashier.Cashier_panelController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -51,7 +50,7 @@ loadPage("/Cashier/reservation.fxml");
 
     @FXML
     void rooms(ActionEvent event) throws IOException {
-loadPage("rooms.fxml");
+loadPage("/Administrator/rooms.fxml");
     }
       @FXML
     void about_us(ActionEvent event) throws IOException {
@@ -65,13 +64,13 @@ loadPage("/Cashier/clients.fxml");
 
    @FXML
     void statistics(ActionEvent event) throws IOException {
-       loadPage("statistics.fxml");
+       loadPage("/Administrator/statistics.fxml");
 
     }
 
     @FXML
     void add_service(ActionEvent event) throws IOException {
-       loadPage("add_service.fxml");
+       loadPage("/Administrator/add_service.fxml");
 
     }
      @FXML

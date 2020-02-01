@@ -1,4 +1,4 @@
-package login;
+package Controllers;
 
 import java.io.IOException;
 import java.net.URL;
@@ -32,7 +32,7 @@ public class MainController implements Initializable {
         t.play();
         t.setOnFinished((e) -> {
             try {
-                fxml = FXMLLoader.load(getClass().getResource("administrator.fxml"));
+                fxml = FXMLLoader.load(getClass().getResource("/login/administrator.fxml"));
                 vbox.getChildren().removeAll();
                 vbox.getChildren().setAll(fxml);
             } catch (IOException ex) {
@@ -48,7 +48,7 @@ public class MainController implements Initializable {
         t.play();
         t.setOnFinished((e) -> {
             try {
-                fxml = FXMLLoader.load(getClass().getResource("cashier.fxml"));
+                fxml = FXMLLoader.load(getClass().getResource("/login/cashier.fxml"));
                 vbox.getChildren().removeAll();
                 vbox.getChildren().setAll(fxml);
             } catch (IOException ex) {
@@ -65,7 +65,7 @@ public class MainController implements Initializable {
         t.play();
         t.setOnFinished((e) -> {
             try {
-                fxml = FXMLLoader.load(getClass().getResource("administrator.fxml"));
+                fxml = FXMLLoader.load(getClass().getResource("/login/administrator.fxml"));
                 vbox.getChildren().removeAll();
                 vbox.getChildren().setAll(fxml);
             } catch (IOException ex) {

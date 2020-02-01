@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="test" style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cashier.ReservationController">
+<AnchorPane fx:id="test" style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReservationController">
    <children>
       <VBox prefHeight="713.0" prefWidth="800.0">
           <children>

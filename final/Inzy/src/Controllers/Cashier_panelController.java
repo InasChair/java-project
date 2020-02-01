@@ -1,4 +1,4 @@
-package Cashier;
+package Controllers;
 
 import java.awt.BorderLayout;
 import java.io.IOException;
@@ -32,7 +32,7 @@ public class Cashier_panelController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         try {
             //To change body of generated methods, choose Tools | Templates.
-            loadPage("home.fxml");
+            loadPage("/Cashier/home.fxml");
         } catch (IOException ex) {
             Logger.getLogger(Cashier_panelController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -47,21 +47,21 @@ public class Cashier_panelController implements Initializable {
    
      @FXML
     void reservation(ActionEvent event) throws IOException {
-loadPage("reservation.fxml");
+loadPage("/Cashier/reservation.fxml");
     }
 
     @FXML
     void rooms(ActionEvent event) throws IOException {
-loadPage("rooms.fxml");
+loadPage("/Cashier/rooms.fxml");
     }
       @FXML
     void about_us(ActionEvent event) throws IOException {
-         loadPage("about_us.fxml");
+         loadPage("/Cashier/about_us.fxml");
     }
 
     @FXML
     void clients(ActionEvent event) throws IOException {
-loadPage("clients.fxml");
+loadPage("/Cashier/clients.fxml");
     }
 
    
@@ -70,7 +70,7 @@ loadPage("clients.fxml");
 
     @FXML
     void home(ActionEvent event) throws IOException {
-       loadPage("home.fxml");
+       loadPage("/Cashier/home.fxml");
 
     }
    
@@ -120,8 +120,8 @@ loadPage("clients.fxml");
                  Scene scene = new Scene(root);
           scene.setFill(Color.TRANSPARENT);
           s.initStyle(StageStyle.TRANSPARENT);
-        s.setScene(scene);
-        s.show();
+          s.setScene(scene);
+          s.show();
   Stage window =(Stage)((Node)event.getSource()).getScene().getWindow();
   window.close();
     }

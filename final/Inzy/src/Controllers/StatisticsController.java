@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Administrator;
+package Controllers;
 
 import java.io.IOException;
 import java.net.URL;
@@ -33,7 +33,7 @@ public class StatisticsController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
-            loadPage("Pie.fxml");
+            loadPage("/Administrator/Pie.fxml");
         } catch (IOException ex) {
             Logger.getLogger(StatisticsController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -41,17 +41,17 @@ public class StatisticsController implements Initializable {
 
     @FXML
     private void Pie(ActionEvent event) throws IOException {
-        loadPage("Pie.fxml");
+        loadPage("/Administrator/Pie.fxml");
     }
 
     @FXML
     private void Bar(ActionEvent event) throws IOException {
-        loadPage("Bar.fxml");
+        loadPage("/Administrator/Bar.fxml");
     }
 
     @FXML
     private void Line(ActionEvent event) throws IOException {
-        loadPage("Line.fxml");
+        loadPage("/Administrator/Line.fxml");
     }
     
      private void loadPage(String page) throws IOException{

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Cashier;
+package Controllers;
 
 import com.jfoenix.controls.JFXDatePicker;
 import java.io.IOException;
@@ -286,7 +286,7 @@ public class ServiceController implements Initializable {
            alert.setContentText("the reservation was registered successfuly");
 
            alert.showAndWait();
-                   FXMLLoader Loader = new FXMLLoader(getClass().getResource("reservation.fxml"));
+                   FXMLLoader Loader = new FXMLLoader(getClass().getResource("/Cashier/reservation.fxml"));
     AnchorPane root =Loader.load();
         
             
@@ -312,7 +312,7 @@ public class ServiceController implements Initializable {
     }
       @FXML
     void back(ActionEvent event) throws IOException {
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("reservation.fxml"));
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/Cashier/reservation.fxml"));
            AnchorPane root =Loader.load();
         test.getChildren().setAll(root);
     }
