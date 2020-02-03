@@ -12,9 +12,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="bp" maxHeight="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="730.0" prefWidth="1100.0" styleClass="parent" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrator.Admin_panelController">
+<AnchorPane id="AnchorPane" fx:id="bp" maxHeight="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="730.0" prefWidth="1100.0" styleClass="parent" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Admin_panelController">
    <children>
-      <VBox prefHeight="730.0" prefWidth="300.0" styleClass="sidebar">
+      <VBox prefHeight="740.0" prefWidth="300.0" styleClass="sidebar">
          <children>
             <HBox>
                <VBox.margin>
@@ -43,7 +43,7 @@
                         <Image url="@../images/icons/icon/icons8-home-page-90.png" />
                      </image>
                   </ImageView>
-                  <JFXButton onMouseClicked="#home" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="HOME" wrapText="true" HBox.hgrow="ALWAYS">
+                  <JFXButton onAction="#home" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="HOME" wrapText="true" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -74,7 +74,7 @@
                         <Image url="@../images/icons/icon/icons8-reserve-96.png" />
                      </image>
                   </ImageView>
-                  <JFXButton onMouseClicked="#reservation" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="RESERVATION" textFill="WHITE" HBox.hgrow="ALWAYS">
+                  <JFXButton onAction="#reservation" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="RESERVATION" textFill="WHITE" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -97,7 +97,7 @@
                         <Image url="@../images/icons/icon/icons8-search-client-96.png" />
                      </image>
                   </ImageView>
-                  <JFXButton onMouseClicked="#clients" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="CLIENTS" textFill="WHITE" HBox.hgrow="ALWAYS">
+                  <JFXButton onAction="#clients" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="CLIENTS" textFill="WHITE" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -120,7 +120,7 @@
                         <Image url="@../images/icons/icon/icons8-bed-100.png" />
                      </image>
                   </ImageView>
-                  <JFXButton onMouseClicked="#rooms" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="ROOMS" textFill="WHITE" HBox.hgrow="ALWAYS">
+                  <JFXButton onAction="#rooms" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="ROOMS" textFill="WHITE" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -143,7 +143,7 @@
                         <Image url="@../images/icons/icon/icons8-add-property-90.png" />
                      </image>
                   </ImageView>
-                  <JFXButton onMouseClicked="#add_service" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="ADD SERVICES" textFill="WHITE" HBox.hgrow="ALWAYS">
+                  <JFXButton onAction="#add_service" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="ADD SERVICES" textFill="WHITE" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -166,7 +166,30 @@
                         <Image url="@../images/icons/icon/icons8-statistics-160.png" />
                      </image>
                   </ImageView>
-                  <JFXButton onMouseClicked="#statistics" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="STATISTICS" textFill="WHITE" HBox.hgrow="ALWAYS">
+                  <JFXButton onAction="#statistics" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="STATISTICS" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Group_Woman_2-512.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton onAction="#statistics" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="Employees" textFill="WHITE" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -189,7 +212,7 @@
                         <Image url="@../images/icons/icon/icons8-about-208.png" />
                      </image>
                   </ImageView>
-                  <JFXButton onMouseClicked="#about_us" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="ABOUT US" textFill="WHITE" HBox.hgrow="ALWAYS">
+                  <JFXButton onAction="#about_us" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="ABOUT US" textFill="WHITE" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -212,9 +235,9 @@
                         <Image url="@../images/icons/icon/exit-512.png" />
                      </image>
                   </ImageView>
-                  <JFXButton prefHeight="31.0" prefWidth="98.0" styleClass="yellow-btn" text="LOGOUT" textFill="WHITE" HBox.hgrow="ALWAYS">
+                  <JFXButton onAction="#logout" prefHeight="31.0" prefWidth="98.0" styleClass="yellow-btn" text="LOGOUT" textFill="WHITE" HBox.hgrow="ALWAYS">
                      <HBox.margin>
-                        <Insets left="30.0" />
+                        <Insets left="5.0" />
                      </HBox.margin>
                      <font>
                         <Font name="Calibri Bold" size="15.0" />
@@ -225,7 +248,7 @@
                   <Insets left="10.0" />
                </padding>
                <VBox.margin>
-                  <Insets left="50.0" top="100.0" />
+                  <Insets left="60.0" top="100.0" />
                </VBox.margin>
             </HBox>
          </children>
@@ -252,6 +275,7 @@
                   </ImageView>
                </children>
             </HBox>
+            <AnchorPane layoutY="29.0" prefHeight="710.0" prefWidth="800.0" fx:id="xD" />
          </children>
       </AnchorPane>
    </children>

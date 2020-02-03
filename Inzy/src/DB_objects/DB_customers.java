@@ -21,7 +21,7 @@ private String sexe;
     private String phone;
     private String email;
 
-    public DB_customers(String nom, String prenom, String ci, String roomid) {
+    public DB_customers(String ci, String nom, String prenom,  String roomid) {
         this.nom = nom;
         this.prenom = prenom;
         this.ci = ci;

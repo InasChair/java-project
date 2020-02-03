@@ -43,7 +43,7 @@ public class DAO_rooms {
        qr+="' between start and end and '"+param2+"' >= end) ";
        qr+="or ('"+param1+"' <= start and '"+param2+"' >= end))"+param3;
 */
-  String qr = "select r.id,floor,type,beds,state,price,CASE WHEN ('"+param1;
+  String qr = "select distinct(r.id),floor,type,beds,state,price,CASE WHEN ('"+param1;
        qr+="'>= start_in and '"+param2+"' <= end_in) or ('"+param1+"' <= start_in and '";
        qr+= param2+"' between start_in and end_in) or ('"+param1;
        qr+="' between start_in and end_in and '"+param2+"' >= end_in) ";
@@ -69,7 +69,7 @@ public class DAO_rooms {
              
                while(rs.next()){
                  
-                   DB_rooms r = new DB_rooms(rs.getString("id"),rs.getString("floor"),rs.getString("type"),rs.getString("beds"),rs.getString("price"),rs.getString("price"));
+                   DB_rooms r = new DB_rooms(rs.getString("id"),rs.getString("floor"),rs.getString("type"),rs.getString("beds"),rs.getString("price"),rs.getString("state"));
                    dt.add(r);
                }
                return dt;

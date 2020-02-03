@@ -6,7 +6,7 @@
 package DB_objects;
 
 
-import Administrator.*;
+//import Administrator.*;
 import Model.*;
 //import com.sun.org.glassfish.gmbal.Description;
 import java.sql.SQLException;
@@ -38,7 +38,7 @@ public class room {
       
         this.Update = new Button("Update");
         this.Update.setOnAction((ActionEvent e)->{
-           ObservableList<room> rooms_ = Administrator.RoomsController.roomsTable_.getSelectionModel().getSelectedItems();
+           ObservableList<room> rooms_ = Controllers.RoomsController.roomsTable_.getSelectionModel().getSelectedItems();
            rooms_.forEach((room r) -> {
                roomModel rm;
                rm = new roomModel();

@@ -6,7 +6,7 @@
 package DB_objects;
 
 import Model.*;
-import Administrator.*;
+//import Administrator.*;
 import java.sql.SQLException;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -31,7 +31,7 @@ public class service {
         this.Price = Price;
         this.Update = new Button("Update");
         this.Update.setOnAction((ActionEvent e)->{
-           ObservableList<service> services_ = Administrator.Add_serviceController.serviceTable_.getSelectionModel().getSelectedItems();
+           ObservableList<service> services_ = Controllers.Add_serviceController.serviceTable_.getSelectionModel().getSelectedItems();
            services_.forEach((service s) -> {
                serviceModel sm;
                sm = new serviceModel();
