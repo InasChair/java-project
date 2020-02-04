@@ -59,7 +59,7 @@ loadPage("/Administrator/rooms.fxml");
 
     @FXML
     void clients(ActionEvent event) throws IOException {
-loadPage("/Cashier/clients.fxml");
+    loadPage("/Cashier/clients.fxml");
     }
 
    @FXML
@@ -78,6 +78,10 @@ loadPage("/Cashier/clients.fxml");
        loadPage("/Cashier/home.fxml");
 
     }
+  @FXML
+    void employee(ActionEvent event) throws IOException {
+      loadPage("/Administrator/empolyee.fxml");
+    }
 
     
    
@@ -91,15 +95,15 @@ loadPage("/Cashier/clients.fxml");
 
     @FXML
     private void dragged(MouseEvent event) {
-           Stage stage =(Stage) ((Node)event.getSource()).getScene().getWindow();
-        stage.setX(event.getSceneX()-x);
-        stage.setY(event.getSceneX()-y);
+//           Stage stage =(Stage) ((Node)event.getSource()).getScene().getWindow();
+//        stage.setX(event.getSceneX()-x);
+//        stage.setY(event.getSceneX()-y);
     }
 
     @FXML
     private void pressed(MouseEvent event) {
-        x=event.getSceneX();
-        y=event.getSceneY();
+//        x=event.getSceneX();
+//        y=event.getSceneY();
     }
 
     @FXML

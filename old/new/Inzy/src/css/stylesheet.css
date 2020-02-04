@@ -1,0 +1,67 @@
+.parent{
+    -fx-background-color:transparent;
+}
+.pane{
+    -fx-background-color:#000000;
+}
+.trans-btn-white-border{
+    -fx-background-color:transparent;
+    -fx-background-radius:5px;
+    -fx-border-color:#cccccc;
+    -fx-border-radius:5px;
+    -fx-border-width:1px;
+    -fx-text-fill:whitesmoke;
+}
+.white-pane{
+    -fx-background-color:#FFFFFF;
+}
+.tf_box{
+    -fx-background-color:transparent;
+    -fx-border-color:#DEDEE4;
+    -fx-border-width:0px 0px 1px 0px;    
+}
+.tf{
+    -fx-background-color:transparent;    
+}
+.yellow-btn{
+    -fx-background-color:#FFE300;
+    -fx-background-radius:5px;
+    -fx-text-fill:#000000;
+    -fx-border-radius: 0;
+} 
+.black-btn{
+    -fx-background-color:#000000;
+    -fx-background-radius:5px;
+    -fx-text-fill:#FFFFFF;
+    -fx-border-radius: 0;
+    
+} 
+.trs-btn{
+    -fx-background-color:#DEDEE4;
+    -fx-background-radius:5px;
+    -fx-text-fill:#000000;
+    -fx-border-radius: 0;
+    
+} 
+.sidebar{
+    -fx-background-color: #000000;
+}
+
+iconBar:hover{
+    -fx-cursor: hand;
+}
+@font-face{
+    src: url("../fonts/Younger than me Bold.ttf");
+}
+
+/* An element which has this id*/
+#LabelID{
+ -fx-font-family:"Younger than me";
+ -fx-font-size:18.0;
+}
+/*
+//or for all labels
+.label{
+  -fx-font-family:"Younger than me";
+  -fx-font-size:18.0;
+}*/

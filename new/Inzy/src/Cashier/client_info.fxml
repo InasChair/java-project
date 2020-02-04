@@ -4,352 +4,360 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="750.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anch" style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Client_infoController">
    <children>
-      <HBox maxHeight="-Infinity" maxWidth="-Infinity">
+      <VBox prefHeight="700.0" prefWidth="800.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Client">
-               <font>
-                  <Font name="Alef Bold" size="44.0" />
-               </font>
-               <HBox.margin>
-                  <Insets right="10.0" />
-               </HBox.margin>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Information " textFill="#ffe300">
-               <font>
-                  <Font name="Alef Bold" size="44.0" />
-               </font>
-            </Label>
-         </children>
-         <VBox.margin>
-            <Insets bottom="20.0" left="170.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox maxHeight="-Infinity" maxWidth="-Infinity">
-         <children>
-            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="98.0" text="Personal " textFill="#ffe300">
-               <font>
-                  <Font name="Calibri Bold" size="24.0" />
-               </font>
-            </Label>
-            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="153.0" text="Information ">
-               <font>
-                  <Font name="Calibri Bold" size="24.0" />
-               </font>
-            </Label>
-         </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <VBox.margin>
-            <Insets bottom="30.0" left="40.0" />
-         </VBox.margin>
-         <padding>
-            <Insets left="20.0" />
-         </padding>
-      </HBox>
-      <HBox prefHeight="30.0" prefWidth="335.0">
-         <children>
-            <Label text="Last Name :">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="30.0" prefWidth="176.0" text="CHAIR ">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="95.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-         <VBox.margin>
-            <Insets left="120.0" right="20.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox layoutX="90.0" layoutY="162.0" prefHeight="30.0" prefWidth="335.0">
-         <children>
-            <Label text="First Name :">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="30.0" prefWidth="176.0" text="Inas">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="95.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-         <VBox.margin>
-            <Insets left="120.0" right="20.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox layoutX="10.0" layoutY="424.0" prefHeight="30.0" prefWidth="335.0">
-         <children>
-            <Label prefHeight="30.0" prefWidth="149.0" text="CIN/N°passport:">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="30.0" prefWidth="142.0" text="kb256763">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="50.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-         <VBox.margin>
-            <Insets left="120.0" right="20.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox layoutX="10.0" layoutY="454.0" prefHeight="30.0" prefWidth="335.0">
-         <children>
-            <Label text="Phone number:">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="30.0" prefWidth="176.0" text="065872458963">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="65.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-         <VBox.margin>
-            <Insets left="120.0" right="20.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox layoutX="10.0" layoutY="484.0" prefHeight="30.0" prefWidth="335.0">
-         <children>
-            <Label text="email:">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="30.0" text="inaschair@gmail.com">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="150.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-         <VBox.margin>
-            <Insets left="120.0" right="20.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox layoutX="10.0" layoutY="515.0" prefHeight="30.0" prefWidth="335.0">
-         <children>
-            <Label text="status :">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="30.0" prefWidth="176.0" text="tomboy">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="140.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-         <VBox.margin>
-            <Insets left="120.0" right="20.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox maxHeight="-Infinity" maxWidth="-Infinity">
-         <children>
-            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="62.0" text="Hotel" textFill="#ffe300">
-               <font>
-                  <Font name="Calibri Bold" size="24.0" />
-               </font>
-            </Label>
-            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="142.0" text="Information ">
-               <font>
-                  <Font name="Calibri Bold" size="24.0" />
-               </font>
-            </Label>
-         </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <VBox.margin>
-            <Insets bottom="30.0" left="40.0" top="20.0" />
-         </VBox.margin>
-         <padding>
-            <Insets left="20.0" />
-         </padding>
-      </HBox>
-      <HBox prefHeight="30.0" prefWidth="335.0">
-         <children>
-            <Label text="Employe-id :">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="30.0" prefWidth="176.0" text="lk29854as">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="95.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-         <VBox.margin>
-            <Insets left="120.0" right="20.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox prefHeight="30.0" prefWidth="335.0">
-         <children>
-            <Label text="N°Room">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="30.0" prefWidth="176.0" text="556">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="130.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-         <VBox.margin>
-            <Insets left="120.0" right="20.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox prefHeight="30.0" prefWidth="335.0">
-         <children>
-            <Label text="Service">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-            </Label>
-            <ComboBox prefWidth="150.0">
-               <HBox.margin>
-                  <Insets left="145.0" />
-               </HBox.margin>
-            </ComboBox>
-         </children>
-         <VBox.margin>
-            <Insets left="120.0" right="20.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox prefHeight="30.0" prefWidth="335.0">
-         <children>
-            <Label prefHeight="30.0" prefWidth="112.0" text="from">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="30.0" />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="30.0" prefWidth="112.0" text="21/11/2019">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Client">
+                     <font>
+                        <Font name="Alef Bold" size="44.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Information " textFill="#ffe300">
+                     <font>
+                        <Font name="Alef Bold" size="44.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="210.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity">
+               <children>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="98.0" text="Personal " textFill="#ffe300">
+                     <font>
+                        <Font name="Calibri Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="153.0" text="Information ">
+                     <font>
+                        <Font name="Calibri Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
                   <Insets />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="30.0" prefWidth="149.0" text="to">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="30.0" prefWidth="142.0" text="24/01/2020">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="30.0" left="40.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="335.0">
+               <children>
+                  <Label text="Last Name :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="l1" prefHeight="30.0" prefWidth="176.0" text="CHAIR ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="95.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="120.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="90.0" layoutY="162.0" prefHeight="30.0" prefWidth="335.0">
+               <children>
+                  <Label text="First Name :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="l2" prefHeight="30.0" prefWidth="176.0" text="Inas">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="95.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="120.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="424.0" prefHeight="30.0" prefWidth="335.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="149.0" text="CIN/N°passport:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="l3" prefHeight="30.0" prefWidth="142.0" text="kb256763">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="120.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="454.0" prefHeight="30.0" prefWidth="335.0">
+               <children>
+                  <Label text="Phone number:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="l4" prefHeight="30.0" prefWidth="176.0" text="065872458963">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="65.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="120.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="484.0" prefHeight="30.0" prefWidth="335.0">
+               <children>
+                  <Label text="email:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="l5" prefHeight="30.0" text="inaschair@gmail.com">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="150.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="120.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="515.0" prefHeight="30.0" prefWidth="335.0">
+               <children>
+                  <Label text="status :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="176.0" text="tomboy">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="140.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="120.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity">
+               <children>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="62.0" text="Hotel" textFill="#ffe300">
+                     <font>
+                        <Font name="Calibri Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="38.0" prefWidth="142.0" text="Information ">
+                     <font>
+                        <Font name="Calibri Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="30.0" left="40.0" top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="335.0">
+               <children>
+                  <Label text="Employe-id :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="l6" prefHeight="30.0" prefWidth="176.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="95.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="120.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="335.0">
+               <children>
+                  <Label text="N°Room">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="l7" prefHeight="30.0" prefWidth="176.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="130.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="120.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="335.0">
+               <children>
+                  <Label text="Service">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="cmb1" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="145.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="120.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="335.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="112.0" text="from">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="l8" prefHeight="30.0" prefWidth="112.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="149.0" text="to">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="l9" prefHeight="30.0" prefWidth="142.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="120.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="335.0">
+               <children>
+                  <Label text="Total price">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="l10" prefHeight="30.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="110.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="120.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="54.0" prefWidth="123.0">
+               <VBox.margin>
+                  <Insets left="590.0" top="30.0" />
+               </VBox.margin>
+               <children>
+                  <JFXButton onAction="#back" prefHeight="55.0" prefWidth="120.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="validate">
+                     <font>
+                        <Font name="Alef Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
          </children>
-         <VBox.margin>
-            <Insets left="120.0" right="20.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox prefHeight="30.0" prefWidth="335.0">
-         <children>
-            <Label text="Total price">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="30.0" right="30.0" />
-               </HBox.margin>
-            </Label>
-            <Label prefHeight="30.0" text="1800.00DH">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="110.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-         <VBox.margin>
-            <Insets left="120.0" right="20.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="54.0" prefWidth="123.0">
-         <VBox.margin>
-            <Insets left="500.0" top="60.0" />
-         </VBox.margin>
-         <children>
-            <JFXButton prefHeight="55.0" prefWidth="120.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="validate">
-               <font>
-                  <Font name="Alef Bold" size="15.0" />
-               </font>
-            </JFXButton>
-         </children>
-      </HBox>
+      </VBox>
    </children>
-</VBox>
+</AnchorPane>

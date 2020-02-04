@@ -65,3 +65,9 @@ iconBar:hover{
   -fx-font-family:"Younger than me";
   -fx-font-size:18.0;
 }*/
+
+radio-button: 
+selected .radio .dot {
+    -fx-background-color: red;
+    -fx-background-insets: 0;
+}

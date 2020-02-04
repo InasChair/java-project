@@ -61,7 +61,7 @@ public class AdministratorController implements Initializable {
     Stage s=new Stage();
               Parent root = FXMLLoader.load(getClass().getResource("/Administrator/admin_panel.fxml"));
                  Scene scene = new Scene(root);
-                 Controlleur C=new Controlleur();
+                 Model1 C=new Model1();
                  int id =C.id_auths(user);
             ReservationController.id=id;  
            scene.setFill(Color.TRANSPARENT);

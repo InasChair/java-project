@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -147,6 +148,34 @@
                               <Insets top="20.0" />
                            </VBox.margin>
                         </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" stylesheets="@../css/stylesheet.css">
+                           <children>
+                              <JFXRadioButton fx:id="rab2" text="available">
+                                 <font>
+                                    <Font name="Alef Regular" size="20.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="rab1" text="not available">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Alef Regular" size="20.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="rab3" styleClass="radio" text="all">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Alef Regular" size="20.0" />
+                                 </font>
+                              </JFXRadioButton>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" top="40.0" />
+                           </padding>
+                        </HBox>
                         <HBox prefHeight="61.0" prefWidth="345.0">
                            <children>
                               <Label prefHeight="30.0" prefWidth="55.0" text="From">
@@ -206,12 +235,11 @@
                      <children>
                         <TableView fx:id="list" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#endless" prefHeight="594.0" prefWidth="385.0">
                            <columns>
-                              <TableColumn fx:id="number" prefWidth="56.799989342689514" text="N°room" />
-                              <TableColumn fx:id="floor" prefWidth="47.199951171875" text="Floor" />
-                              <TableColumn fx:id="beds" minWidth="0.0" prefWidth="51.99999237060547" text="Beds" />
-                              <TableColumn fx:id="type" minWidth="1.5999755859375" prefWidth="78.39996337890625" text="type" />
-                              <TableColumn fx:id="price" minWidth="6.4000244140625" prefWidth="61.5999755859375" text="Price" />
-                              <TableColumn fx:id="av" minWidth="6.4000244140625" prefWidth="89.60003051757815" text="availablity" />
+                              <TableColumn fx:id="number" prefWidth="69.0" text="N°room" />
+                              <TableColumn fx:id="floor" prefWidth="66.0" text="Floor" />
+                              <TableColumn fx:id="beds" minWidth="0.0" prefWidth="81.0" text="Beds" />
+                              <TableColumn fx:id="type" minWidth="1.5999755859375" prefWidth="71.0" text="type" />
+                              <TableColumn fx:id="price" minWidth="6.4000244140625" prefWidth="95.0" text="Price" />
                            </columns>
                            <VBox.margin>
                               <Insets />

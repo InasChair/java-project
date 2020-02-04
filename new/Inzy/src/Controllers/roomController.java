@@ -27,12 +27,14 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -64,14 +66,14 @@ public class roomController implements Initializable {
     @FXML
     private TableColumn<DB_rooms,String> floor;
     
-      @FXML
+    @FXML
     private TableColumn<DB_rooms,String> type;
       
-      @FXML
+    @FXML
     private TableColumn<DB_rooms,String> price;
-          @FXML
+    @FXML
     private TableColumn<DB_rooms,String> beds;
-          @FXML
+    @FXML
     private TableColumn<DB_rooms,String> state;
           
     @FXML
@@ -85,6 +87,14 @@ public class roomController implements Initializable {
     @FXML
     private TextField txtp;
     @FXML
+    private RadioButton rab1;
+    @FXML
+    private RadioButton rab2;
+    @FXML
+    private RadioButton rab3;
+    @FXML
+    ToggleGroup tg = new ToggleGroup();
+      
    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -92,16 +102,17 @@ public class roomController implements Initializable {
         
         ObservableList<String> lstc = FXCollections.observableArrayList("Single","Twin","Suite","Double");
         cmb1.setItems(lstc);
-        ObservableList<String> lstb = FXCollections.observableArrayList("1","2","3");
+        ObservableList<String> lstb = FXCollections.observableArrayList("1","2","3","4","5");
         cmb2.setItems(lstb);
         ObservableList<String> lsta = FXCollections.observableArrayList("1","2","3");
         cmb3.setItems(lstb);
         dt1.setValue(LocalDate.now());
         dt2.setValue(LocalDate.now());
+         rab1.setToggleGroup(tg);
+         rab2.setToggleGroup(tg);
+         rab3.setToggleGroup(tg);
+         rab3.setSelected(true);
 
-        
-
-  
            ObservableList<DB_rooms> rooms;
       
             DAO_rooms drm = new DAO_rooms();
@@ -130,19 +141,18 @@ public class roomController implements Initializable {
        type.setCellValueFactory(new PropertyValueFactory<DB_rooms, String>("type"));
        price.setCellValueFactory(new PropertyValueFactory<DB_rooms, String>("price"));
        beds.setCellValueFactory(new PropertyValueFactory<DB_rooms, String>("beds"));
-       av.setCellValueFactory(new PropertyValueFactory<DB_rooms, String>("av"));
        list.setRowFactory(tableView -> {
     final TableRow<DB_rooms> row = new TableRow<>();
       
-    row.hoverProperty().addListener((observable) -> {
+    row.selectedProperty().addListener((observable) -> {
          DB_rooms rr = row.getItem();
        
         if (row.isFocused() && rr != null) {
-             if(rr.getAv().compareToIgnoreCase("available")!=0)
+             if(rab2.isSelected()==false)
              {Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");
             alert.setHeaderText(null);
-             alert.setContentText("this roon isn't available, chose another one please!!" );
+             alert.setContentText("select available rooms,please!!" );
             alert.showAndWait();
              }
              else{
@@ -219,8 +229,19 @@ public class roomController implements Initializable {
                 {param += " and floor = "+Integer.parseInt(rfloor);
                 }
        }
- initTable();
+      initTable();
+      if(rab1.isSelected())
+	  {
       list.setItems((new DAO_rooms()).getrooms(dt1.getValue().toString(),dt2.getValue().toString(), param));
+	  }
+	  if(rab2.isSelected())
+	  {
+	  list.setItems((new DAO_rooms()).getroomsnav(dt1.getValue().toString(),dt2.getValue().toString(), param));
+	  }
+        if(rab3.isSelected())
+	  {
+	  list.setItems((new DAO_rooms()).getall(dt1.getValue().toString(),dt2.getValue().toString(), param));
+	  }
      
         
        }

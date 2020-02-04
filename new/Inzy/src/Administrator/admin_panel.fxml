@@ -189,7 +189,7 @@
                         <Image url="@../images/icons/icon/84451222_184849952582196_4118499326169186304_n.png" />
                      </image>
                   </ImageView>
-                  <JFXButton onAction="#statistics" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="Employees" textFill="WHITE" HBox.hgrow="ALWAYS">
+                  <JFXButton onAction="#employee" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="Employees" textFill="WHITE" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>

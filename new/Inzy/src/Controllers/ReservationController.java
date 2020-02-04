@@ -47,7 +47,7 @@ import static jdk.nashorn.internal.objects.NativeRegExp.test;
 
 
 public class ReservationController implements Initializable {
-          Controlleur c = new Controlleur();
+          Model1 c = new Model1();
                   
 public static int id=0;
      @FXML

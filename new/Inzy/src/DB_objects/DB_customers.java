@@ -17,7 +17,7 @@ public class DB_customers {
     private String prenom;
     private String ci;
     private String roomid;
-private String sexe;
+    private String sexe;
     private String phone;
     private String email;
 
@@ -25,6 +25,14 @@ private String sexe;
         this.nom = nom;
         this.prenom = prenom;
         this.ci = ci;
+        this.roomid = roomid;
+    }
+
+    public String getRoomid() {
+        return roomid;
+    }
+
+    public void setRoomid(String roomid) {
         this.roomid = roomid;
     }
    
