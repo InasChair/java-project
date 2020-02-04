@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RoomsController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" stylesheets="@../css/stylesheet.css">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="63.0" prefWidth="126.0" text="Room" textFill="#ffe300">
+                     <font>
+                        <Font name="Alef Bold" size="44.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="80.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="63.0" prefWidth="310.0" text=" management ">
+                     <font>
+                        <Font name="Alef Bold" size="44.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="45.0" fitWidth="186.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images/pinzy-03.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="130.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="592.0" prefWidth="773.0">
+               <children>
+                  <VBox prefHeight="538.0" prefWidth="339.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="120.0" text="Search BY:">
+                           <font>
+                              <Font name="Alef Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="40.0" left="10.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="36.0" prefWidth="361.0">
+                           <children>
+                              <JFXCheckBox fx:id="byType" checkedColor="#ffe300" text="Room type ">
+                                 <font>
+                                    <Font name="Alef Regular" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="-25.0" />
+                                 </HBox.margin>
+                              </JFXCheckBox>
+                              <ComboBox fx:id="Types" opacity="0.49" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="361.0">
+                           <children>
+                              <JFXCheckBox fx:id="byBeds" checkedColor="#ffe300" text="Bed number">
+                                 <font>
+                                    <Font name="Alef Regular" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="-25.0" />
+                                 </HBox.margin>
+                              </JFXCheckBox>
+                              <ComboBox fx:id="Beds" opacity="0.5" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="45.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="184.0" prefHeight="36.0" prefWidth="361.0">
+                           <children>
+                              <JFXCheckBox fx:id="byFloor" checkedColor="#ffe300" text="Floor">
+                                 <font>
+                                    <Font name="Alef Regular" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="-25.0" />
+                                 </HBox.margin>
+                              </JFXCheckBox>
+                              <ComboBox fx:id="Floors" opacity="0.5" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="110.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="144.0" prefHeight="36.0" prefWidth="361.0">
+                           <children>
+                              <JFXCheckBox fx:id="byPrice" checkedColor="#ffe300" text="Price">
+                                 <font>
+                                    <Font name="Alef Regular" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="-25.0" />
+                                 </HBox.margin>
+                              </JFXCheckBox>
+                              <TextField fx:id="Price" accessibleRole="BUTTON" promptText="Maximum Price">
+                                 <HBox.margin>
+                                    <Insets left="110.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="66.0" prefHeight="58.0" prefWidth="378.0">
+                           <children>
+                              <JFXCheckBox fx:id="byAcces" checkedColor="#ffe300" prefHeight="58.0" prefWidth="182.0" text="Accessibility ">
+                                 <font>
+                                    <Font name="Alef Regular" size="20.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <JFXToggleButton fx:id="Access" prefHeight="58.0" prefWidth="152.0" text="available" toggleColor="#ffe300" toggleLineColor="#b9c278" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="228.0" prefHeight="36.0" prefWidth="361.0">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <children>
+                              <JFXButton onAction="#Search" prefHeight="24.0" prefWidth="290.0" styleClass="yellow-btn" text="Search">
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="50.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="541.0" prefWidth="405.0">
+                     <children>
+                        <TableView fx:id="roomsTable" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="406.0">
+                          <columns>
+                            <TableColumn fx:id="roomId" prefWidth="60.80004918575287" text="N°room" />
+                            <TableColumn fx:id="roomFloor" prefWidth="42.39996337890625" text="Floor" />
+                              <TableColumn fx:id="roomBeds" prefWidth="49.60003662109375" text="Beds" />
+                              <TableColumn fx:id="roomType" minWidth="1.5999755859375" prefWidth="74.4000244140625" text="type" />
+                              <TableColumn fx:id="roomPrice" prefWidth="76.0" text="Price" />
+                              <TableColumn fx:id="roomUpdate" prefWidth="103.199951171875" text="Updtae" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets left="30.0" top="15.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
