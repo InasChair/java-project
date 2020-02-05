@@ -35,8 +35,10 @@ public class Add_serviceController implements Initializable {
      public static ObservableList<service> services;
     @FXML
     private TextField Name;
+    @FXML
     private TextField Price;
 
+    @FXML
     private TextField Desc;
     @FXML
     private TableView<service> serviceTable;
@@ -45,9 +47,12 @@ public class Add_serviceController implements Initializable {
     private TableColumn<service, Integer> serviceId;
     @FXML
     private TableColumn<service, String> serviceName;
+    @FXML
     private TableColumn<service, Double> servicePrice;
 
+    @FXML
     private TableColumn<service,String> serviceDesc;
+    @FXML
     private TableColumn<service,Button> serviceUpdate;
 
          IntegerStringConverter toInt =  new IntegerStringConverter();
@@ -58,9 +63,8 @@ public class Add_serviceController implements Initializable {
     private Label labelPrice;
         @FXML
     private Label labelDesc;
-    private Label errorMesssage;
     @FXML
-    private Label labelName1;
+    private Label errorMesssage;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
       serviceTable_ = serviceTable;

@@ -26,14 +26,13 @@ public class DB_rooms {
     }
 
     
-    public DB_rooms(String n, String f, String t, String b, String p,String av)
+    public DB_rooms(String n, String f, String t, String b, String p)
     {
      this.number = n;
      this.floor = f;
      this.type = t;
      this.beds = b;
      this.price = p;
-     this.av = av;
     }
 
     public String getNumber() {

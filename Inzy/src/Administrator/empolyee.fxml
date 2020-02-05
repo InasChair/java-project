@@ -14,9 +14,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.customerController">
+<AnchorPane style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EmpolyeeController">
    <children>
-      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" stylesheets="@../css/stylesheet.css">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="800.0" stylesheets="@../css/stylesheet.css">
          <children>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity">
                <children>
@@ -79,7 +79,10 @@
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <TextField fx:id="Name" />
+                                    <TextField fx:id="Name" prefHeight="26.0" prefWidth="158.0">
+                                       <HBox.margin>
+                                          <Insets left="25.0" />
+                                       </HBox.margin></TextField>
                                  </children>
                                  <padding>
                                     <Insets left="20.0" />
@@ -98,7 +101,10 @@
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <PasswordField />
+                                    <PasswordField fx:id="Password" prefHeight="26.0" prefWidth="158.0">
+                                       <HBox.margin>
+                                          <Insets left="25.0" />
+                                       </HBox.margin></PasswordField>
                                  </children>
                                  <padding>
                                     <Insets left="20.0" />
@@ -107,9 +113,9 @@
                                     <Insets bottom="10.0" />
                                  </VBox.margin>
                               </HBox>
-                              <HBox prefHeight="36.0" prefWidth="361.0">
+                              <HBox prefHeight="36.0" prefWidth="390.0">
                                  <children>
-                                    <Label fx:id="labelDesc" prefHeight="28.0" prefWidth="191.0" text="Confirm password">
+                                    <Label fx:id="labelDesc" prefHeight="28.0" prefWidth="196.0" text="Confirm password">
                                        <font>
                                           <Font name="Alef Regular" size="20.0" />
                                        </font>
@@ -117,7 +123,10 @@
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <PasswordField />
+                                    <PasswordField fx:id="cpass" prefHeight="26.0" prefWidth="158.0">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin></PasswordField>
                                  </children>
                                  <padding>
                                     <Insets left="20.0" />
@@ -153,7 +162,7 @@
                                     <Insets bottom="20.0" left="30.0" top="30.0" />
                                  </VBox.margin>
                               </Label>
-                              <HBox layoutX="10.0" layoutY="88.0" prefHeight="36.0" prefWidth="361.0">
+                              <HBox layoutX="10.0" layoutY="88.0" prefHeight="36.0" prefWidth="392.0">
                                  <children>
                                     <Label fx:id="labelName1" prefHeight="28.0" prefWidth="189.0" text="Username">
                                        <font>
@@ -163,7 +172,10 @@
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <TextField fx:id="Name1" />
+                                    <TextField fx:id="Name1" prefHeight="26.0" prefWidth="158.0">
+                                       <HBox.margin>
+                                          <Insets left="25.0" />
+                                       </HBox.margin></TextField>
                                  </children>
                                  <padding>
                                     <Insets left="20.0" />
@@ -181,19 +193,25 @@
                                        <padding>
                                           <Insets left="20.0" />
                                        </padding>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
                                     </Label>
-                                    <PasswordField />
+                                    <PasswordField fx:id="Password1" prefHeight="26.0" prefWidth="158.0">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin></PasswordField>
                                  </children>
-                                 <padding>
-                                    <Insets left="20.0" />
-                                 </padding>
                                  <VBox.margin>
                                     <Insets bottom="10.0" />
                                  </VBox.margin>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
                               </HBox>
                               <HBox prefHeight="36.0" prefWidth="361.0">
                                  <children>
-                                    <Label fx:id="labelDesc1" prefHeight="28.0" prefWidth="191.0" text="Confirm password">
+                                    <Label fx:id="labelDesc1" prefHeight="28.0" prefWidth="210.0" text="Confirm password">
                                        <font>
                                           <Font name="Alef Regular" size="20.0" />
                                        </font>
@@ -201,7 +219,10 @@
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <PasswordField />
+                                    <PasswordField fx:id="cpass1" prefHeight="26.0" prefWidth="158.0">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin></PasswordField>
                                  </children>
                                  <padding>
                                     <Insets left="20.0" />
@@ -212,7 +233,7 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="228.0" prefHeight="36.0" prefWidth="361.0">
                                  <children>
-                                    <JFXButton onAction="#Add" prefHeight="30.0" prefWidth="216.0" styleClass="yellow-btn" text="Change">
+                                    <JFXButton onAction="#change" prefHeight="30.0" prefWidth="216.0" styleClass="yellow-btn" text="Change">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -234,9 +255,9 @@
                   </VBox>
                   <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="484.0" prefWidth="242.0">
                      <children>
-                        <TableView fx:id="serviceTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="279.0">
+                        <TableView fx:id="serviceTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="229.0">
                            <columns>
-                              <TableColumn fx:id="serviceId" prefWidth="276.0000305175781" text="Username" />
+                              <TableColumn fx:id="serviceId" prefWidth="228.79999313354492" text="Username" />
                            </columns>
                            <VBox.margin>
                               <Insets left="20.0" />

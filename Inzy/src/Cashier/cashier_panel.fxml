@@ -23,10 +23,13 @@
                   <Insets bottom="50.0" />
                </VBox.margin>
                <children>
-                  <Label alignment="CENTER" prefHeight="82.0" prefWidth="202.0" style="-fx-background-color: #000000;" text="CashierApp" textAlignment="CENTER" textFill="WHITE">
+                  <Label alignment="CENTER" prefHeight="90.0" prefWidth="194.0" style="-fx-background-color: #000000;" text="CashierApp" textAlignment="CENTER" textFill="GAINSBORO">
                      <font>
-                        <Font name="Calibri Bold" size="28.0" />
+                        <Font name="Calibri Bold" size="34.0" />
                      </font>
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
                   </Label>
                   <ImageView fitHeight="117.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
                      <image>

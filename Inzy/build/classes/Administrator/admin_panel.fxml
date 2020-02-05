@@ -14,20 +14,23 @@
 
 <AnchorPane id="AnchorPane" fx:id="bp" maxHeight="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="730.0" prefWidth="1100.0" styleClass="parent" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Admin_panelController">
    <children>
-      <VBox prefHeight="740.0" prefWidth="300.0" styleClass="sidebar">
+      <VBox prefHeight="742.0" prefWidth="300.0" styleClass="sidebar">
          <children>
             <HBox>
                <VBox.margin>
                   <Insets bottom="30.0" />
                </VBox.margin>
                <children>
-                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="227.0" style="-fx-background-color: #000000;" text="AdminApp" textAlignment="CENTER" textFill="#f5f5f5">
+                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="227.0" style="-fx-background-color: #000000;" text="AdminApp" textAlignment="CENTER" textFill="GAINSBORO">
                      <font>
-                        <Font name="Calibri Bold" size="28.0" />
+                        <Font name="Calibri Bold" size="38.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding>
                   </Label>
                   <ImageView fitHeight="83.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -184,12 +187,12 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
                <children>
-                  <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/icons/Group_Woman_2-512.png" />
+                        <Image url="@../images/icons/icon/84451222_184849952582196_4118499326169186304_n.png" />
                      </image>
                   </ImageView>
-                  <JFXButton onAction="#statistics" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="Employees" textFill="WHITE" HBox.hgrow="ALWAYS">
+                  <JFXButton onAction="#employee" prefHeight="34.0" prefWidth="243.0" styleClass="yellow-btn" text="Employees" textFill="WHITE" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>

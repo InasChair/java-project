@@ -7,6 +7,7 @@ package Controllers;
 
 import Model.roomModel;
 import DB_objects.*;
+import Model.Auth;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXToggleButton;
 import java.awt.BorderLayout;
@@ -93,6 +94,8 @@ public class RoomsController implements Initializable {
     @Override
     
     public void initialize(URL url, ResourceBundle rb) {
+            Auth a= new Auth();
+              a.Rroom();
         roomsTable_ = roomsTable;
            ObservableList<String> types = FXCollections.observableArrayList("Type 1","type 2");
            ObservableList<Integer> floors = FXCollections.observableArrayList(1,2,3,4);

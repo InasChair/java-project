@@ -6,10 +6,13 @@
 package Model;
 import DAO.*;
 import DB_objects.*;
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -72,5 +75,35 @@ public class Auth {
             St.executeUpdate(Req);
         }
     }
+           public ResultSet User1(String user){
+          ResultSet Res = null;
+          try {
+           St = Con.createStatement();
+            Res = St.executeQuery("SELECT * FROM `auths` WHERE username ='"+user+"' ");
+        } catch (SQLException ex) {
+             System.out.println("Erreur dans la requete select ou ST , " + ex.getMessage());
+        }
+         return   Res;
+    }
+         public void Rreservation() 
+         {
+        try {
+            String query = "{CALL reservationstate()}";
+            
+            CallableStatement stmt = Con.prepareCall(query);
+            ResultSet rs = stmt.executeQuery();
+        } catch (SQLException ex) {
+            System.out.println("error");        }
+         }
+           public void Rroom() 
+         {
+        try {
+            String query = "{CALL roomstate()}";
+            
+            CallableStatement stmt = Con.prepareCall(query);
+            ResultSet rs = stmt.executeQuery();
+        } catch (SQLException ex) {
+            System.out.println("error");        }
+         }
     
 }

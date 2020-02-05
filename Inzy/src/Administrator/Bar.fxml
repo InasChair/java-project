@@ -51,7 +51,7 @@
                         <Insets bottom="10.0" left="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#getNewPie" prefHeight="26.0" prefWidth="76.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="Compare">
+                  <Button mnemonicParsing="false" onAction="#getNewPie" prefHeight="26.0" prefWidth="89.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="Compare">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin></Button>

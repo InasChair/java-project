@@ -65,3 +65,8 @@ iconBar:hover{
   -fx-font-family:"Younger than me";
   -fx-font-size:18.0;
 }*/
+
+.jfx-radio-button {
+    -fx-selected-color: yellow;
+    -fx-unselected-color: blue;
+}

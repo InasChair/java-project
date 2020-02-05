@@ -17,7 +17,7 @@
             <Insets left="50.0" />
          </padding>
       </Label>
-      <ImageView fitHeight="145.0" fitWidth="195.0" layoutX="86.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="86.0">
+      <ImageView fitHeight="145.0" fitWidth="195.0" layoutX="86.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="86.0">
          <image>
             <Image url="@../images/images/0.png" />
          </image>
@@ -68,7 +68,7 @@
             <Font name="Arial Narrow" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="456.0" layoutY="350.0" prefHeight="32.0" prefWidth="255.0" text="Zouhair DRIOUCHE">
+      <Label layoutX="456.0" layoutY="350.0" prefHeight="32.0" prefWidth="275.0" text="Zouhair DRIOUECHE">
          <graphic>
             <ImageView disable="true" fitHeight="32.0" fitWidth="32.0" focusTraversable="true" nodeOrientation="RIGHT_TO_LEFT" opacity="0.54" pickOnBounds="true" preserveRatio="true">
                <image>

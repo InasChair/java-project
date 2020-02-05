@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.customerController">
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.customerController" fx:id="xDD">
    <children>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="800.0" style="-fx-background-color: #f3f3f3;" stylesheets="@../css/stylesheet.css">
          <children>
@@ -162,21 +162,25 @@
                         <Insets top="40.0" />
                      </HBox.margin>
                   </VBox>
-                  <VBox prefHeight="547.0" prefWidth="374.0">
+                  <AnchorPane fx:id="anch1">
                      <children>
-                        <TableView fx:id="liste" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handlemouseevent" prefHeight="600.0" prefWidth="376.0">
-                           <columns>
-                              <TableColumn fx:id="iddoc" prefWidth="96.0" text="CIN/Passeport" />
-                              <TableColumn fx:id="lname" prefWidth="92.0" text="First name" />
-                              <TableColumn fx:id="fname" prefWidth="84.00006103515625" text="Last name" />
-                              <TableColumn fx:id="nroom" minWidth="1.5999755859375" prefWidth="102.4000244140625" text="Room" />
-                           </columns>
-                           <VBox.margin>
-                              <Insets top="20.0" />
-                           </VBox.margin>
-                        </TableView>
+                        <VBox prefHeight="547.0" prefWidth="374.0">
+                           <children>
+                              <TableView fx:id="liste" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handlemouseevent" prefHeight="600.0" prefWidth="376.0">
+                                 <columns>
+                                    <TableColumn fx:id="iddoc" prefWidth="96.0" text="CIN/Passeport" />
+                                    <TableColumn fx:id="fname" prefWidth="92.0" text="First name" />
+                                    <TableColumn fx:id="lname" prefWidth="84.00006103515625" text="Last name" />
+                                    <TableColumn fx:id="nuroom" minWidth="1.5999755859375" prefWidth="102.4000244140625" text="room" />
+                                 </columns>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
                      </children>
-                  </VBox>
+                  </AnchorPane>
                </children>
                <VBox.margin>
                   <Insets left="40.0" />

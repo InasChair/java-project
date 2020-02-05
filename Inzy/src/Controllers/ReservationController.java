@@ -47,7 +47,7 @@ import static jdk.nashorn.internal.objects.NativeRegExp.test;
 
 
 public class ReservationController implements Initializable {
-          Controlleur c = new Controlleur();
+          Model1 c = new Model1();
                   
 public static int id=0;
      @FXML
@@ -117,6 +117,16 @@ public static int id=0;
             
         }
         else{
+                
+                if(datedeb.getValue().compareTo(LocalDate.now())<0)
+                {
+                     Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+             alert.setContentText("Wrong date !");
+            alert.showAndWait();
+            return;
+                }
                if(datedeb.getValue().compareTo(datefin.getValue())>0){
                    Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");
@@ -278,7 +288,7 @@ public static int id=0;
     {
         sexe.setValue("");
               String s[] = 
-                   { "Male", "Femel",  };
+                   { "Male", "Female",  };
     sexe.setItems(FXCollections.observableArrayList(s));
     
 }

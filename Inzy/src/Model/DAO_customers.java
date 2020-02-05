@@ -35,13 +35,32 @@ public class DAO_customers {
       ObservableList<DB_customers> dt = FXCollections.observableArrayList(); 
       ResultSet rs ;
       Statement statement=Maconnexion.createStatement();
-       String qr="select ci,nom,prenom,max((case when sysdate() between start_in and end_in then d.room_id else null";
-         qr+= " end)) nr from customers c, reservations r ,details d where c.id=r.customer_id and r.id=d.reservation_id ";
-         qr+=param3;
+          String  qr = "select distinct nom, prenom, ci,d.room_id ";
+                  qr+= " from customers c left join actualreservations r on c.id=r.customer_id left"; 
+                  qr+= " join actualdetails d on r.id=d.reservation_id where 1 ";
+		  qr+=param3;
          System.out.println(qr);
          rs = statement.executeQuery(qr);
         while(rs.next()){
-            DB_customers c = new DB_customers(rs.getString("ci"),rs.getString("prenom"),rs.getString("nom"),rs.getString("nr"));
+            DB_customers c = new DB_customers(rs.getString("ci"),rs.getString("prenom"),rs.getString("nom"),rs.getString("d.room_id"));
+            dt.add(c); 
+         } 
+          return dt;
+      }
+    public ObservableList<DB_customers> All() throws SQLException
+     {
+      
+      ObservableList<DB_customers> dt = FXCollections.observableArrayList(); 
+      ResultSet rs ;
+      Statement statement=Maconnexion.createStatement();
+          String  qr = "select distinct nom, prenom, ci,d.room_id ";
+                  qr+= " from customers c left join actualreservations r on c.id=r.customer_id left"; 
+                  qr+= " join actualdetails d on r.id=d.reservation_id where 1 ";
+		
+         System.out.println(qr);
+         rs = statement.executeQuery(qr);
+        while(rs.next()){
+            DB_customers c = new DB_customers(rs.getString("ci"),rs.getString("prenom"),rs.getString("nom"),rs.getString("d.room_id"));
             dt.add(c); 
          } 
           return dt;

@@ -43,7 +43,7 @@ import javafx.scene.layout.AnchorPane;
  */
 public class ServiceController implements Initializable {
 
- Controlleur c = new Controlleur();
+ Model1 c = new Model1();
 
     private LocalDate datedeb;
 

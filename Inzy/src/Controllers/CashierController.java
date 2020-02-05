@@ -60,7 +60,7 @@ public class CashierController   implements Initializable {
         
 
     }
-    Controlleur C = new Controlleur();
+    Model1 C = new Model1();
         @FXML
     private TextField cusername;
 

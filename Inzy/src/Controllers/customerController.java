@@ -5,17 +5,24 @@
  */
 package Controllers;
 
+import static Controllers.RoomsController.rooms;
 import DAO.*;
 import Model.*;
 import DB_objects.*;
+import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TableColumn;
@@ -23,6 +30,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  *
@@ -30,6 +39,9 @@ import javafx.scene.input.MouseEvent;
  */
 public class customerController implements Initializable{
 
+    
+    @FXML
+    private AnchorPane xDD;
     @FXML
     CheckBox ck1;
     @FXML
@@ -47,7 +59,7 @@ public class customerController implements Initializable{
     @FXML
     private TableColumn<DB_customers,String> iddoc;
     @FXML
-    private TableColumn<DB_customers,String> nroom;
+    private TableColumn<DB_customers,String> nuroom;
     @FXML
     private TextField cekx;
     @FXML
@@ -71,7 +83,7 @@ public class customerController implements Initializable{
                 }
                 else
                 {
-                   param= " and nom = '"+rlname+"'"; 
+                   param+= " and nom = '"+rlname+"'"; 
                 }
                 }
             if(ck2.isSelected()) 
@@ -85,7 +97,7 @@ public class customerController implements Initializable{
                 }
                 else
                 {
-                   param = " and prenom = '"+rfiname+"'"; 
+                   param+= " and prenom = '"+rfiname+"'"; 
                 }
                 }
             if(ck3.isSelected()) 
@@ -102,7 +114,7 @@ public class customerController implements Initializable{
                    param+= " and ci = '"+rci+"'"; 
                 }
                 }
-            param += " group by nom,prenom,ci ";
+           
            if(ck4.isSelected()) 
                 { rroomnub= cek4.getText();
                 if(rroomnub.isEmpty())
@@ -114,13 +126,13 @@ public class customerController implements Initializable{
                 }
                 else
                 {
-                   param+= " having nr = "+rroomnub; 
+                   param+= " and room_id = "+rroomnub; 
                 }
                 }
            iddoc.setCellValueFactory(new PropertyValueFactory<>("ci"));    
            lname.setCellValueFactory(new PropertyValueFactory<>("nom"));
            fname.setCellValueFactory(new PropertyValueFactory<>("prenom"));
-           nroom.setCellValueFactory(new PropertyValueFactory<>("roomid"));
+           nuroom.setCellValueFactory(new PropertyValueFactory<>("roomid"));
            liste.setItems((new DAO_customers()).getcustomers(param));
         }
             catch(SQLException ex)
@@ -131,16 +143,16 @@ public class customerController implements Initializable{
    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-       String param="select ci,nom,prenom,max((case when sysdate() between start_in and end_in then d.room_id else null end)) nr from customers c, reservations r ,details d where c.id=r.customer_id and r.id=d.reservation_id ";
-         iddoc.setCellValueFactory(new PropertyValueFactory<>("ci"));    
-           lname.setCellValueFactory(new PropertyValueFactory<>("nom"));
-           fname.setCellValueFactory(new PropertyValueFactory<>("prenom"));
-           nroom.setCellValueFactory(new PropertyValueFactory<>("roomid"));
         try {
-            liste.setItems((new DAO_customers()).getcustomers(param));
+            iddoc.setCellValueFactory(new PropertyValueFactory<>("ci"));
+            lname.setCellValueFactory(new PropertyValueFactory<>("nom"));
+            fname.setCellValueFactory(new PropertyValueFactory<>("prenom"));
+            nuroom.setCellValueFactory(new PropertyValueFactory<>("roomid"));
+            liste.setItems(new DAO_customers().All() );
         } catch (SQLException ex) {
-            Logger.getLogger(customerController.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("data base error");
         }
+           
     }
     @FXML
     private void handleClearAction(ActionEvent event)  {
@@ -155,9 +167,40 @@ public class customerController implements Initializable{
         liste.getItems().clear();
     }
     @FXML
-    private void handlemouseevent(ActionEvent event)
+    private void handlemouseevent(MouseEvent event) throws SQLException, IOException
     {
-        DB_customers c= liste.getSelectionModel().getSelectedItem();
+        DB_customers c=liste.getSelectionModel().getSelectedItem();
         System.out.println(c.getCi());
+        String para= c.getCi();
+        DAO_details d1 =new DAO_details();
+		ResultSet rs= d1.getdetailss(para);
+                rs.next();
+		/*
+        ResultSet r1= d1.getdetails(para);
+        System.out.println(r1);
+        r1.next();
+        ResultSet r2= d1.getdetails2(r1.getString("r.id"));
+        System.out.println(r2);
+        r2.next();
+        ResultSet r3= d1.getdetails3(r1.getString("r.id"));
+        System.out.println(r3);
+        r3.next();
+        ResultSet r4=null;
+         r4= d1.getdetails4(r2.getString("detail_id"));
+        System.out.println(r4);
+        r4.next();
+		*/
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/Cashier/client_info.fxml"));
+         AnchorPane root =(AnchorPane)Loader.load();
+            Client_infoController cinf = Loader.getController();
+            //cinf.afficher(rs);
+//            Scene scene1 =new Scene(root);
+//            Stage window =(Stage)((Node)event.getSource()).getScene().getWindow();
+//            window.setScene(scene1);
+              xDD.getChildren().setAll(root);
+            cinf.afficher(rs);
+//            window.show();
     }
 }
+
+
