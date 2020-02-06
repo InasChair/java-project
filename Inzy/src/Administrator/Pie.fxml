@@ -4,9 +4,11 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PieController">
     <children>
@@ -15,18 +17,22 @@
             <PieChart fx:id="mypie" />
          </children>
       </VBox>
-      <HBox layoutX="144.0" layoutY="411.0" prefHeight="41.0" prefWidth="512.0">
+      <HBox layoutX="137.0" layoutY="410.0" prefHeight="42.0" prefWidth="249.0">
          <children>
-            <JFXDatePicker fx:id="fromDate" defaultColor="#676664" prefHeight="28.0" prefWidth="185.0" />
-            <JFXDatePicker fx:id="toDate" defaultColor="#676664" prefWidth="185.0">
+            <Label fx:id="RFrom_D" prefHeight="18.0" prefWidth="58.0" text="From">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
                <HBox.margin>
-                  <Insets left="70.0" />
+                  <Insets top="15.0" />
                </HBox.margin>
-            </JFXDatePicker>
+            </Label>
+            <Label />
+            <JFXDatePicker fx:id="fromDate" defaultColor="#676664" prefHeight="28.0" prefWidth="185.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></JFXDatePicker>
          </children>
-         <padding>
-            <Insets left="50.0" />
-         </padding>
       </HBox>
       <HBox layoutX="161.0" layoutY="517.0">
          <padding>
@@ -34,5 +40,18 @@
          </padding>
       </HBox>
       <Button layoutX="359.0" layoutY="468.0" mnemonicParsing="false" onAction="#getPie" prefHeight="26.0" prefWidth="114.0" styleClass="yellow-btn" stylesheets="@../css/stylesheet.css" text="display" />
+      <HBox layoutX="410.0" layoutY="410.0" prefHeight="42.0" prefWidth="221.0">
+         <children>
+            <Label fx:id="RFrom_D1" prefHeight="18.0" prefWidth="58.0" text="To">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+            </Label>
+            <JFXDatePicker fx:id="toDate" defaultColor="#676664" prefWidth="185.0" />
+         </children>
+      </HBox>
     </children>
 </AnchorPane>

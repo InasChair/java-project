@@ -47,23 +47,6 @@ public class DAO_customers {
          } 
           return dt;
       }
-    public ObservableList<DB_customers> All() throws SQLException
-     {
-      
-      ObservableList<DB_customers> dt = FXCollections.observableArrayList(); 
-      ResultSet rs ;
-      Statement statement=Maconnexion.createStatement();
-          String  qr = "select distinct nom, prenom, ci,d.room_id ";
-                  qr+= " from customers c left join actualreservations r on c.id=r.customer_id left"; 
-                  qr+= " join actualdetails d on r.id=d.reservation_id where 1 ";
-		
-         System.out.println(qr);
-         rs = statement.executeQuery(qr);
-        while(rs.next()){
-            DB_customers c = new DB_customers(rs.getString("ci"),rs.getString("prenom"),rs.getString("nom"),rs.getString("d.room_id"));
-            dt.add(c); 
-         } 
-          return dt;
-      }
+  
 }
     

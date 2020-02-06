@@ -18,6 +18,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
+import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 
 /**
@@ -56,6 +57,15 @@ public class PieController implements Initializable {
     }    
     @FXML
        private void getPie(ActionEvent event) throws SQLException {
+           if(toDate.getValue().compareTo(LocalDate.now())>0)
+                {
+                     Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+             alert.setContentText("Wrong date !");
+            alert.showAndWait();
+            return;
+                }
         try {     
             mypie.setData(new ChartModel().getPieData(fromDate.getValue().toString(), toDate.getValue().toString()));
         } catch (SQLException ex) {

@@ -12,40 +12,10 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Administrator/admin_panel.fxml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Model/DAO_customers.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/ReservationController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DB_objects/room.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/ServiceController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/client_info.fxml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DB_objects/DB_rooms.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/LineController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/BarController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Administrator/empolyee.fxml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Administrator/Line.fxml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/Admin_panelController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/home.fxml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/EmpolyeeController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DB_objects/service.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DB_objects/Details.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DB_objects/detail_services.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Model/Auth.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/css/stylesheet.css</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/CashierController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/rooms.fxml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Administrator/add_service.fxml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Cashier/clients.fxml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/images/icons/analytics+chart+finance+graph+report+statistics+icon-1320073242486433418.png</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/DB_objects/DB_customers.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/Add_serviceController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/Cashier_panelController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/RoomsController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/roomController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/Client_infoController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/MainController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/AdministratorController.java</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/login/Main.fxml</file>
-            <file>file:/D:/Desktop/ginf2/java%20&amp;%20xml/Java/project/Inzy/src/Controllers/customerController.java</file>
+            <file>file:/C:/Users/CHAIR%20Inas/Desktop/Nouveau%20dossier/backup/Nouveau%20dossier/Inzy/src/Controllers/PieController.java</file>
+            <file>file:/C:/Users/CHAIR%20Inas/Desktop/Nouveau%20dossier/backup/Nouveau%20dossier/Inzy/src/Controllers/ReservationController.java</file>
+            <file>file:/C:/Users/CHAIR%20Inas/Desktop/Nouveau%20dossier/backup/Nouveau%20dossier/Inzy/src/Controllers/AdministratorController.java</file>
+            <file>file:/C:/Users/CHAIR%20Inas/Desktop/Nouveau%20dossier/backup/Nouveau%20dossier/Inzy/src/Controllers/CashierController.java</file>
         </group>
     </open-files>
 </project-private>

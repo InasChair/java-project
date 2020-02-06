@@ -91,7 +91,8 @@ public static int id=0;
         @FXML
     private JFXTextField phone;
             
-
+    int idf;
+    public static  DB_rooms sliver =null;
   
 
     @FXML
@@ -220,6 +221,14 @@ public static int id=0;
             alert.setContentText("Fill all the blancks,Please!");
             alert.showAndWait();
      }else{
+         if(datedeb.getValue().compareTo(LocalDate.now())<0)
+                {
+                     Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+             alert.setContentText("Wrong date !");
+            alert.showAndWait();
+            return;}
          
         FXMLLoader Loader = new FXMLLoader(getClass().getResource("/Cashier/service.fxml"));
         
@@ -292,9 +301,9 @@ public static int id=0;
     sexe.setItems(FXCollections.observableArrayList(s));
     
 }
-    /////////////////////////////////////////////////////////////////////////////////////////
-    int idf;
-     public static  DB_rooms sliver =null;
+ 
+
+ 
         @FXML
     void check(ActionEvent event) throws IOException, InterruptedException {
   Stage stage =new Stage();
@@ -341,6 +350,6 @@ public static int id=0;
         this.id1.setText(type);
         this.id11.setText(beds);
         this.id12.setText(price);
-        this.ci1.setText(ci);//this was the one
+        this.ci1.setText(ci);
     }
 }

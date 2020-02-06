@@ -36,13 +36,6 @@ public class DAO_rooms {
   ResultSet rs = null;
   Statement statement;
           statement=Maconnexion.createStatement();
-  /*
-  String qr = "select id,floor,type,beds,state,price FROM rooms r where id not in (select room_id from details where ('"+param1;
-       qr+="'>= start and '"+param2+"' <= end) or ('"+param1+"' <= start and '";
-       qr+= param2+"' between start and end) or ('"+param1;
-       qr+="' between start and end and '"+param2+"' >= end) ";
-       qr+="or ('"+param1+"' <= start and '"+param2+"' >= end))"+param3;
-*/
        String qr = "select distinct r.id,floor,type,beds,state,price ";
               qr += "from rooms r where not exists(select * from details d where d.room_id = r.id and (('"+param1;
               qr+="'>= start_in and '"+param2+"' <= end_in) or ('"+param1+"' <= start_in and '";
@@ -68,14 +61,7 @@ public class DAO_rooms {
   ResultSet rs = null;
   Statement statement;
           statement=Maconnexion.createStatement();
-  /*
-  String qr = "select id,floor,type,beds,state,price FROM rooms r where id not in (select room_id from details where ('"+param1;
-       qr+="'>= start and '"+param2+"' <= end) or ('"+param1+"' <= start and '";
-       qr+= param2+"' between start and end) or ('"+param1;
-       qr+="' between start and end and '"+param2+"' >= end) ";
-       qr+="or ('"+param1+"' <= start and '"+param2+"' >= end))"+param3;
-*/
-        String qr = "select distinct r.id,floor,type,beds,state,price ";
+         String qr = "select distinct r.id,floor,type,beds,state,price ";
               qr += "from rooms r where exists(select * from details d where d.room_id = r.id and (('"+param1;
               qr+="'>= start_in and '"+param2+"' <= end_in) or ('"+param1+"' <= start_in and '";
               qr+= param2+"' between start_in and end_in) or ('"+param1;
@@ -100,13 +86,6 @@ public class DAO_rooms {
   ResultSet rs = null;
   Statement statement;
           statement=Maconnexion.createStatement();
-  /*
-  String qr = "select id,floor,type,beds,state,price FROM rooms r where id not in (select room_id from details where ('"+param1;
-       qr+="'>= start and '"+param2+"' <= end) or ('"+param1+"' <= start and '";
-       qr+= param2+"' between start and end) or ('"+param1;
-       qr+="' between start and end and '"+param2+"' >= end) ";
-       qr+="or ('"+param1+"' <= start and '"+param2+"' >= end))"+param3;
-*/
   String qr = "select distinct r.id,floor,type,beds,state,price ";
        qr += " from rooms r where 1 ";
        qr += param3;

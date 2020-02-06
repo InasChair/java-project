@@ -11,7 +11,7 @@
 
 <AnchorPane fx:id="anch" style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Client_infoController">
    <children>
-      <VBox prefHeight="700.0" prefWidth="800.0">
+      <VBox prefHeight="713.0" prefWidth="800.0">
          <children>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity">
                <children>
@@ -273,7 +273,7 @@
                         <Insets left="30.0" right="30.0" />
                      </HBox.margin>
                   </Label>
-                  <ComboBox fx:id="cmb1" prefWidth="150.0">
+                  <ComboBox fx:id="cmb1" prefWidth="150.0" promptText="Show ">
                      <HBox.margin>
                         <Insets left="145.0" />
                      </HBox.margin>

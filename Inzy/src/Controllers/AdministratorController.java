@@ -28,6 +28,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 
 /**
  * FXML Controller class
@@ -70,6 +71,12 @@ public class AdministratorController implements Initializable {
         s.show();
   Stage window =(Stage)((Node)e.getSource()).getScene().getWindow();
   window.close();
+        }else{
+             Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+            alert.setContentText("Invalid information,please try again");
+            alert.showAndWait();
         }
 }
     /**

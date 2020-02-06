@@ -143,15 +143,6 @@ public class customerController implements Initializable{
    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        try {
-            iddoc.setCellValueFactory(new PropertyValueFactory<>("ci"));
-            lname.setCellValueFactory(new PropertyValueFactory<>("nom"));
-            fname.setCellValueFactory(new PropertyValueFactory<>("prenom"));
-            nuroom.setCellValueFactory(new PropertyValueFactory<>("roomid"));
-            liste.setItems(new DAO_customers().All() );
-        } catch (SQLException ex) {
-            System.out.println("data base error");
-        }
            
     }
     @FXML
@@ -175,31 +166,11 @@ public class customerController implements Initializable{
         DAO_details d1 =new DAO_details();
 		ResultSet rs= d1.getdetailss(para);
                 rs.next();
-		/*
-        ResultSet r1= d1.getdetails(para);
-        System.out.println(r1);
-        r1.next();
-        ResultSet r2= d1.getdetails2(r1.getString("r.id"));
-        System.out.println(r2);
-        r2.next();
-        ResultSet r3= d1.getdetails3(r1.getString("r.id"));
-        System.out.println(r3);
-        r3.next();
-        ResultSet r4=null;
-         r4= d1.getdetails4(r2.getString("detail_id"));
-        System.out.println(r4);
-        r4.next();
-		*/
         FXMLLoader Loader = new FXMLLoader(getClass().getResource("/Cashier/client_info.fxml"));
          AnchorPane root =(AnchorPane)Loader.load();
             Client_infoController cinf = Loader.getController();
-            //cinf.afficher(rs);
-//            Scene scene1 =new Scene(root);
-//            Stage window =(Stage)((Node)event.getSource()).getScene().getWindow();
-//            window.setScene(scene1);
               xDD.getChildren().setAll(root);
             cinf.afficher(rs);
-//            window.show();
     }
 }
 
